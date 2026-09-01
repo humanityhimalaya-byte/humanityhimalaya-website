@@ -1,0 +1,508 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Humanity Himalaya — Our website is currently under construction."
+  />
+
+  <meta name="theme-color" content="#102f4f" />
+
+  <title>Our Work | Humanity Himalaya</title>
+
+  <style>
+    :root {
+      --navy: #102f4f;
+      --navy-dark: #09233b;
+      --orange: #ef5b23;
+      --orange-dark: #d94d19;
+      --text: #172333;
+      --muted: #5d6975;
+      --light: #f5f8fb;
+      --white: #ffffff;
+      --border: #e3e9ef;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    /* ---------- TOP BAR ---------- */
+
+    .topbar {
+      background: var(--navy-dark);
+      color: #dce8f2;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* ---------- NAVIGATION ---------- */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand img {
+      width: 280px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #26384a;
+      padding: 28px 0;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--orange);
+    }
+
+    .nav-donate {
+      background: var(--orange);
+      color: #fff !important;
+      padding: 12px 18px !important;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(239, 91, 35, 0.2);
+    }
+
+    .nav-donate:hover {
+      background: var(--orange-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* ---------- UNDER CONSTRUCTION ---------- */
+
+    .construction {
+      min-height: calc(100vh - 124px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #f5f8fb 0%,
+          #ffffff 50%,
+          #f5f8fb 100%
+        );
+      padding: 80px 20px;
+    }
+
+    .construction-card {
+      width: min(760px, 100%);
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 65px 50px;
+      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
+    }
+
+    /* Construction sign */
+
+    .construction-sign {
+      width: 105px;
+      height: 105px;
+      margin: 0 auto 30px;
+      background: var(--orange);
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 52px;
+      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
+    }
+
+    .construction-kicker {
+      color: var(--orange);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .construction h1 {
+      color: var(--navy);
+      font-size: clamp(38px, 6vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .construction h1 span {
+      color: var(--orange);
+    }
+
+    .construction p {
+      max-width: 610px;
+      margin: 0 auto 18px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .construction-message {
+      margin-top: 25px;
+      padding: 18px 22px;
+      background: var(--light);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+      min-height: 50px;
+      padding: 0 26px;
+      border-radius: 8px;
+      background: var(--orange);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 14px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .home-button:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background: #071c2e;
+      color: #b9c9d7;
+    }
+
+    .footer-bottom {
+      min-height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 12px;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 14px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar {
+        display: none;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .brand img {
+        width: 220px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 68px;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        padding: 12px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 0;
+      }
+
+      .nav-donate {
+        text-align: center;
+        margin: 7px 0;
+      }
+
+      .construction {
+        min-height: calc(100vh - 68px);
+        padding: 50px 15px;
+      }
+
+      .construction-card {
+        padding: 45px 25px;
+      }
+
+      .construction-sign {
+        width: 85px;
+        height: 85px;
+        font-size: 42px;
+      }
+
+      .construction p {
+        font-size: 16px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP INFORMATION BAR -->
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Humanity Himalaya — Relief. Restore. Rebuild.</span>
+    </div>
+  </div>
+
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a
+        href="index.html"
+        class="brand"
+        aria-label="Humanity Himalaya Home"
+      >
+        <img
+          src="logo.jpg"
+          alt="Humanity Himalaya — Relief. Restore. Rebuild."
+        />
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a  href="about.html">About Us</a>
+          </li>
+
+          <li>
+            <a  href="our-work.html">Our Work</a>
+          </li>
+
+          <li>
+            <a  href="get-involved.html">Get Involved</a>
+          </li>
+
+          <li>
+            <a  href="news.html">News &amp; Updates</a>
+          </li>
+
+          <li>
+            <a class="active" href="contact.html">Contact Us</a>
+          </li>
+
+          <li>
+            <a class="nav-donate" href="donate.html">
+              Donate Now
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- UNDER CONSTRUCTION -->
+
+  <main>
+
+    <section class="construction">
+
+      <div class="construction-card">
+
+        <!-- Construction Sign -->
+        <div class="construction-sign" aria-hidden="true">
+          🚧
+        </div>
+
+        <div class="construction-kicker">
+          Humanity Himalaya
+        </div>
+
+        <h1>
+                  <span>Coming Soon</span>
+        </h1>
+
+        <p>
+          We are currently building this section of the
+          Humanity Himalaya website.
+        </p>
+
+        <div class="construction-message">
+          <strong>🚧 Website Under Construction</strong><br />
+          We appreciate your patience while we build a
+          meaningful and informative website for Humanity
+          Himalaya.
+        </div>
+
+        <a class="home-button" href="index.html">
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-bottom">
+
+      <span>
+        © 2026 Humanity Himalaya. All rights reserved.
+      </span>
+
+      <span>
+        Relief. Restore. Rebuild.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+
+      navLinks.classList.toggle("open");
+
+      const isOpen = navLinks.classList.contains("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+
+    });
+  </script>
+
+</body>
+</html>
+```
