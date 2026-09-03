@@ -7,12 +7,12 @@
 
   <meta
     name="description"
-    content="Humanity Himalaya — Our website is currently under construction."
+    content="Contact Humanity Himalaya. Send us a message about our humanitarian work, volunteering, partnerships, or ways to get involved."
   />
 
   <meta name="theme-color" content="#102f4f" />
 
-  <title>Our Work | Humanity Himalaya</title>
+  <title>Contact Us | Humanity Himalaya</title>
 
   <style>
     :root {
@@ -144,50 +144,22 @@
       cursor: pointer;
     }
 
-    /* ---------- UNDER CONSTRUCTION ---------- */
+    /* ---------- CONTACT HERO ---------- */
 
-    .construction {
-      min-height: calc(100vh - 124px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .contact-hero {
       background:
         linear-gradient(
           135deg,
           #f5f8fb 0%,
-          #ffffff 50%,
+          #ffffff 55%,
           #f5f8fb 100%
         );
-      padding: 80px 20px;
+
+      padding: 75px 20px 55px;
+      text-align: center;
     }
 
-    .construction-card {
-      width: min(760px, 100%);
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 65px 50px;
-      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
-    }
-
-    /* Construction sign */
-
-    .construction-sign {
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 30px;
-      background: var(--orange);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 52px;
-      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
-    }
-
-    .construction-kicker {
+    .contact-kicker {
       color: var(--orange);
       text-transform: uppercase;
       font-size: 13px;
@@ -196,53 +168,197 @@
       margin-bottom: 12px;
     }
 
-    .construction h1 {
+    .contact-hero h1 {
       color: var(--navy);
-      font-size: clamp(38px, 6vw, 58px);
+      font-size: clamp(38px, 6vw, 56px);
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .construction h1 span {
+    .contact-hero h1 span {
       color: var(--orange);
     }
 
-    .construction p {
-      max-width: 610px;
-      margin: 0 auto 18px;
+    .contact-hero p {
+      max-width: 700px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: 17px;
     }
 
-    .construction-message {
-      margin-top: 25px;
-      padding: 18px 22px;
-      background: var(--light);
-      border-left: 4px solid var(--orange);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 15px;
-      text-align: left;
+    /* ---------- CONTACT SECTION ---------- */
+
+    .contact-section {
+      padding: 65px 20px 85px;
+      background: #ffffff;
     }
 
-    .home-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      min-height: 50px;
-      padding: 0 26px;
+    .contact-grid {
+      width: min(100%, 1050px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.85fr 1.35fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    /* ---------- LEFT INFORMATION ---------- */
+
+    .contact-info {
+      padding: 10px 5px;
+    }
+
+    .contact-info h2 {
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    .info-box {
+      display: flex;
+      gap: 15px;
+      padding: 18px;
+      background: var(--light);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border-left: 4px solid var(--orange);
+    }
+
+    .info-icon {
+      font-size: 25px;
+      width: 35px;
+      flex-shrink: 0;
+    }
+
+    .info-box h3 {
+      color: var(--navy);
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .info-box p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* ---------- FORM CARD ---------- */
+
+    .contact-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 38px;
+      box-shadow: 0 18px 45px rgba(11, 36, 59, 0.09);
+    }
+
+    .contact-card h2 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .form-intro {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .required {
+      color: var(--orange);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid #d5dee7;
+      border-radius: 8px;
+      padding: 13px 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: #ffffff;
+      outline: none;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(239, 91, 35, 0.10);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      width: 100%;
+      border: none;
+      min-height: 52px;
       border-radius: 8px;
       background: var(--orange);
       color: #ffffff;
+      font-size: 15px;
       font-weight: 800;
-      font-size: 14px;
-      transition: background 0.2s ease, transform 0.2s ease;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .home-button:hover {
+    .submit-button:hover {
       background: var(--orange-dark);
-      transform: translateY(-2px);
+      transform: translateY(-1px);
+    }
+
+    .privacy-note {
+      margin-top: 14px;
+      color: #77828d;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* ---------- SUCCESS MESSAGE ---------- */
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px 18px;
+      border-radius: 8px;
+      background: #eef8f1;
+      border-left: 4px solid #319457;
+      color: #205d36;
+      font-size: 14px;
     }
 
     /* ---------- FOOTER ---------- */
@@ -270,7 +386,23 @@
       }
     }
 
+    @media (max-width: 850px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .contact-info {
+        text-align: center;
+      }
+
+      .info-box {
+        text-align: left;
+      }
+    }
+
     @media (max-width: 760px) {
+
       .topbar {
         display: none;
       }
@@ -316,23 +448,21 @@
         margin: 7px 0;
       }
 
-      .construction {
-        min-height: calc(100vh - 68px);
-        padding: 50px 15px;
+      .contact-hero {
+        padding: 55px 20px 40px;
       }
 
-      .construction-card {
-        padding: 45px 25px;
+      .contact-section {
+        padding: 45px 15px 60px;
       }
 
-      .construction-sign {
-        width: 85px;
-        height: 85px;
-        font-size: 42px;
+      .contact-card {
+        padding: 28px 22px;
       }
 
-      .construction p {
-        font-size: 16px;
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
       }
 
       .footer-bottom {
@@ -350,7 +480,9 @@
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <span>Humanity Himalaya — Relief. Restore. Rebuild.</span>
+      <span>
+        Humanity Himalaya — Relief. Restore. Rebuild.
+      </span>
     </div>
   </div>
 
@@ -388,23 +520,25 @@
           </li>
 
           <li>
-            <a  href="about.html">About Us</a>
+            <a href="about.html">About Us</a>
           </li>
 
           <li>
-            <a  href="our-work.html">Our Work</a>
+            <a href="our-work.html">Our Work</a>
           </li>
 
           <li>
-            <a  href="get-involved.html">Get Involved</a>
+            <a href="get-involved.html">Get Involved</a>
           </li>
 
           <li>
-            <a  href="news.html">News &amp; Updates</a>
+            <a href="news.html">News &amp; Updates</a>
           </li>
 
           <li>
-            <a class="active" href="contact.html">Contact Us</a>
+            <a class="active" href="contact.html">
+              Contact Us
+            </a>
           </li>
 
           <li>
@@ -420,46 +554,296 @@
   </header>
 
 
-  <!-- UNDER CONSTRUCTION -->
+  <!-- CONTACT HERO -->
 
-  <main>
+  <section class="contact-hero">
 
-    <section class="construction">
+    <div class="container">
 
-      <div class="construction-card">
+      <div class="contact-kicker">
+        Humanity Himalaya
+      </div>
 
-        <!-- Construction Sign -->
-        <div class="construction-sign" aria-hidden="true">
-          🚧
-        </div>
+      <h1>
+        Contact <span>Us</span>
+      </h1>
 
-        <div class="construction-kicker">
-          Humanity Himalaya
-        </div>
+      <p>
+        We would love to hear from you. Whether you have a
+        question, want to volunteer, explore a partnership,
+        or learn more about our work, please send us a message.
+      </p>
 
-        <h1>
-                  <span>Coming Soon</span>
-        </h1>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT CONTENT -->
+
+  <main class="contact-section">
+
+    <div class="contact-grid">
+
+      <!-- LEFT SIDE -->
+
+      <div class="contact-info">
+
+        <h2>
+          We'd Love to Hear From You
+        </h2>
 
         <p>
-          We are currently building this section of the
-          Humanity Himalaya website.
+          Please use the form to send a message to
+          Humanity Himalaya. A member of our team will
+          review your message and respond as soon as possible.
         </p>
 
-        <div class="construction-message">
-          <strong>🚧 Website Under Construction</strong><br />
-          We appreciate your patience while we build a
-          meaningful and informative website for Humanity
-          Himalaya.
+        <div class="info-box">
+
+          <div class="info-icon">
+            🤝
+          </div>
+
+          <div>
+            <h3>Get Involved</h3>
+            <p>
+              Ask us about volunteering and supporting
+              our humanitarian initiatives.
+            </p>
+          </div>
+
         </div>
 
-        <a class="home-button" href="index.html">
-          ← Back to Home
-        </a>
+        <div class="info-box">
+
+          <div class="info-icon">
+            🌎
+          </div>
+
+          <div>
+            <h3>Partnerships</h3>
+            <p>
+              Interested in partnering with Humanity Himalaya?
+              We'd be happy to hear from you.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="info-box">
+
+          <div class="info-icon">
+            💙
+          </div>
+
+          <div>
+            <h3>Questions &amp; Support</h3>
+            <p>
+              Have a question about our organization or
+              our humanitarian work? Send us a message.
+            </p>
+          </div>
+
+        </div>
 
       </div>
 
-    </section>
+
+      <!-- CONTACT FORM -->
+
+      <div class="contact-card">
+
+        <h2>
+          Send Us a Message
+        </h2>
+
+        <p class="form-intro">
+          Please complete the form below. Fields marked
+          with <span class="required">*</span> are required.
+        </p>
+
+
+        <!--
+          IMPORTANT:
+          Replace YOUR_WEB3FORMS_ACCESS_KEY with your
+          Web3Forms access key.
+        -->
+
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+
+          <!-- WEB3FORMS ACCESS KEY -->
+          <input
+            type="hidden"
+            name="access_key"
+            value="21d38743-3908-473d-ac8a-8e6759c257b3"
+
+          />
+
+          <!-- EMAIL SUBJECT -->
+          <input
+            type="hidden"
+            name="subject"
+            value="New Contact Form Message - Humanity Himalaya"
+          />
+
+          <!-- EMAIL TO -->
+          <input
+            type="hidden"
+            name="to"
+            value="humanityhimalaya@gmail.com"
+          />
+
+          <!-- FROM NAME -->
+          <input
+            type="hidden"
+            name="from_name"
+            value="Humanity Himalaya Website"
+          />
+
+          <!-- HONEYPOT SPAM PROTECTION -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            style="display:none;"
+          />
+
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="name">
+                Full Name <span class="required">*</span>
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email Address <span class="required">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="yourname@example.com"
+                required
+              />
+
+            </div>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="phone">
+              Phone Number
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Optional"
+            />
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="reason">
+              How Can We Help?
+            </label>
+
+            <select
+              id="reason"
+              name="reason"
+            >
+
+              <option value="">
+                Please select an option
+              </option>
+
+              <option value="General Inquiry">
+                General Inquiry
+              </option>
+
+              <option value="Volunteer">
+                Volunteer
+              </option>
+
+              <option value="Donation">
+                Donation
+              </option>
+
+              <option value="Partnership">
+                Partnership
+              </option>
+
+              <option value="Humanitarian Support">
+                Humanitarian Support
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="message">
+              Message <span class="required">*</span>
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Please enter your message..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="submit-button"
+          >
+            Send Message
+          </button>
+
+
+          <p class="privacy-note">
+            Your information will only be used to respond
+            to your inquiry.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
 
   </main>
 
@@ -486,21 +870,31 @@
   <!-- MOBILE MENU -->
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
 
-    menuToggle.addEventListener("click", function () {
+    const menuToggle =
+      document.getElementById("menuToggle");
 
-      navLinks.classList.toggle("open");
+    const navLinks =
+      document.getElementById("navLinks");
 
-      const isOpen = navLinks.classList.contains("open");
 
-      menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
+    menuToggle.addEventListener(
+      "click",
+      function () {
 
-    });
+        navLinks.classList.toggle("open");
+
+        const isOpen =
+          navLinks.classList.contains("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+      }
+    );
+
   </script>
 
 </body>
