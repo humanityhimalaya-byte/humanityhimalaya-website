@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
 
   <meta
     name="description"
-    content="Humanity Himalaya — About Us. Our website is currently under construction."
+    content="Learn about Humanity Himalaya, a global humanitarian organization committed to relieving suffering, restoring dignity, rebuilding hope, and supporting communities in need."
   />
 
   <meta name="theme-color" content="#102f4f" />
@@ -26,6 +25,7 @@
       --white: #ffffff;
       --border: #e3e9ef;
       --max: 1180px;
+      --shadow: 0 12px 35px rgba(9, 35, 59, 0.08);
     }
 
     * {
@@ -39,10 +39,19 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        Helvetica,
+        sans-serif;
       color: var(--text);
       background: var(--white);
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 16px;
     }
 
     a {
@@ -60,7 +69,9 @@
       margin: 0 auto;
     }
 
-    /* ---------- TOP BAR ---------- */
+    /* =========================
+       TOP BAR
+    ========================= */
 
     .topbar {
       background: var(--navy-dark);
@@ -76,7 +87,9 @@
       gap: 20px;
     }
 
-    /* ---------- NAVIGATION ---------- */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     .navbar {
       position: sticky;
@@ -144,108 +157,494 @@
       cursor: pointer;
     }
 
-    /* ---------- UNDER CONSTRUCTION ---------- */
+    /* =========================
+       PAGE HERO
+    ========================= */
 
-    .construction {
-      min-height: calc(100vh - 124px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .page-hero {
       background:
         linear-gradient(
           135deg,
           #f5f8fb 0%,
-          #ffffff 50%,
-          #f5f8fb 100%
+          #ffffff 55%,
+          #fff7f3 100%
         );
-      padding: 80px 20px;
+      border-bottom: 1px solid var(--border);
+      padding: 78px 20px 70px;
+      text-align: center;
     }
 
-    .construction-card {
-      width: min(760px, 100%);
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 65px 50px;
-      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
-    }
-
-    /* Construction sign */
-
-    .construction-sign {
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 30px;
-      background: var(--orange);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 52px;
-      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
-    }
-
-    .construction-kicker {
+    .hero-kicker {
       color: var(--orange);
-      text-transform: uppercase;
       font-size: 13px;
-      font-weight: 900;
+      font-weight: 800;
       letter-spacing: 2px;
+      text-transform: uppercase;
       margin-bottom: 12px;
     }
 
-    .construction h1 {
+    .page-hero h1 {
       color: var(--navy);
-      font-size: clamp(38px, 6vw, 58px);
-      line-height: 1.1;
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -1px;
       margin-bottom: 20px;
     }
 
-    .construction h1 span {
+    .page-hero h1 span {
       color: var(--orange);
     }
 
-    .construction p {
-      max-width: 610px;
-      margin: 0 auto 18px;
+    .hero-text {
+      max-width: 780px;
+      margin: 0 auto;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 18px;
+      line-height: 1.75;
     }
 
-    .construction-message {
-      margin-top: 25px;
-      padding: 18px 22px;
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-light {
       background: var(--light);
-      border-left: 4px solid var(--orange);
-      border-radius: 8px;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-heading .kicker {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .content-width {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .content-width p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .content-width p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       MISSION / VISION
+    ========================= */
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 35px;
+    }
+
+    .mission-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .mission-card .icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #fff1eb;
+      color: var(--orange);
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .mission-card h3 {
+      color: var(--navy);
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .mission-card p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       WHAT WE BELIEVE
+    ========================= */
+
+    .belief-box {
+      max-width: 940px;
+      margin: 0 auto;
+      background: var(--white);
+      border-left: 5px solid var(--orange);
+      border-radius: 12px;
+      padding: 34px 38px;
+      box-shadow: var(--shadow);
+    }
+
+    .belief-box p {
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .value-number {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .value-card h3 {
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .value-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       AREAS OF SUPPORT
+    ========================= */
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .support-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px 28px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .support-icon {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: #fff1eb;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .support-card h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .support-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       NEPAL SECTION
+    ========================= */
+
+    .nepal-section {
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy-dark),
+          var(--navy)
+        );
+      color: white;
+    }
+
+    .nepal-section .section-heading .kicker {
+      color: #ff9a70;
+    }
+
+    .nepal-section .section-heading h2 {
+      color: white;
+    }
+
+    .nepal-section .section-heading p {
+      color: #d5e1eb;
+    }
+
+    .nepal-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .nepal-content p {
+      color: #d5e1eb;
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .nepal-highlight {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .nepal-highlight-card {
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 23px;
+    }
+
+    .nepal-highlight-card h3 {
+      color: white;
+      font-size: 17px;
+      margin-bottom: 7px;
+    }
+
+    .nepal-highlight-card p {
+      color: #cbd9e5;
+      font-size: 14px;
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       HUMANITARIAN APPROACH
+    ========================= */
+
+    .approach-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 28px;
+    }
+
+    .approach-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .approach-check {
+      color: var(--orange);
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .approach-item span:last-child {
       color: var(--text);
       font-size: 15px;
-      text-align: left;
     }
 
-    .home-button {
+    /* =========================
+       DIRECT ASSISTANCE
+    ========================= */
+
+    .direct-assistance {
+      max-width: 950px;
+      margin: 0 auto;
+      background: #fff7f3;
+      border: 1px solid #f6d8cb;
+      border-radius: 16px;
+      padding: 38px;
+    }
+
+    .direct-assistance h2 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+
+    .direct-assistance p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .direct-assistance p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       GLOBAL VISION
+    ========================= */
+
+    .global-vision {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .global-vision h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .global-vision p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .vision-statement {
+      margin-top: 32px;
+      padding: 30px;
+      background: var(--navy);
+      color: white;
+      border-radius: 14px;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .vision-statement span {
+      color: #ff956d;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section {
+      padding: 75px 0;
+      background: var(--light);
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 42px);
+      margin-bottom: 14px;
+    }
+
+    .cta-section p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
       min-height: 50px;
       padding: 0 26px;
       border-radius: 8px;
-      background: var(--orange);
-      color: #ffffff;
-      font-weight: 800;
       font-size: 14px;
-      transition: background 0.2s ease, transform 0.2s ease;
+      font-weight: 800;
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .home-button:hover {
+    .button-primary {
+      background: var(--orange);
+      color: white;
+      box-shadow: 0 8px 18px rgba(239, 91, 35, 0.2);
+    }
+
+    .button-primary:hover {
       background: var(--orange-dark);
       transform: translateY(-2px);
     }
 
-    /* ---------- FOOTER ---------- */
+    .button-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .button-secondary:hover {
+      background: var(--navy);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #071c2e;
@@ -261,12 +660,22 @@
       font-size: 12px;
     }
 
-    /* ---------- MOBILE ---------- */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 1000px) {
       .nav-links {
         gap: 14px;
         font-size: 13px;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nepal-highlight {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -316,23 +725,44 @@
         margin: 7px 0;
       }
 
-      .construction {
-        min-height: calc(100vh - 68px);
-        padding: 50px 15px;
+      .page-hero {
+        padding: 55px 20px 50px;
       }
 
-      .construction-card {
-        padding: 45px 25px;
-      }
-
-      .construction-sign {
-        width: 85px;
-        height: 85px;
-        font-size: 42px;
-      }
-
-      .construction p {
+      .hero-text {
         font-size: 16px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .mission-grid,
+      .support-grid,
+      .approach-list,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-card {
+        padding: 28px;
+      }
+
+      .belief-box {
+        padding: 27px;
+      }
+
+      .belief-box p {
+        font-size: 16px;
+      }
+
+      .direct-assistance {
+        padding: 28px;
+      }
+
+      .vision-statement {
+        padding: 25px;
+        font-size: 19px;
       }
 
       .footer-bottom {
@@ -346,7 +776,9 @@
 
 <body>
 
-  <!-- TOP INFORMATION BAR -->
+  <!-- =========================
+       TOP INFORMATION BAR
+  ========================= -->
 
   <div class="topbar">
     <div class="container topbar-inner">
@@ -355,7 +787,9 @@
   </div>
 
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
   <header class="navbar">
     <div class="container nav-inner">
@@ -420,49 +854,804 @@
   </header>
 
 
-  <!-- UNDER CONSTRUCTION -->
+  <!-- =========================
+       PAGE HERO
+  ========================= -->
 
   <main>
 
-    <section class="construction">
+    <section class="page-hero">
+      <div class="container">
 
-      <div class="construction-card">
-
-        <!-- Construction Sign -->
-        <div class="construction-sign" aria-hidden="true">
-          🚧
-        </div>
-
-        <div class="construction-kicker">
-          Humanity Himalaya
+        <div class="hero-kicker">
+          About Humanity Himalaya
         </div>
 
         <h1>
-          About Us
-          <span>Coming Soon</span>
+          Compassion Without <span>Borders</span>
         </h1>
 
-        <p>
-          We are currently building this section of the
-          Humanity Himalaya website.
+        <p class="hero-text">
+          Humanity Himalaya is committed to helping people, families,
+          communities, and animals facing hardship. Our vision is global:
+          to respond with compassion wherever meaningful humanitarian
+          support is needed.
         </p>
 
-        <p>
-          Our About Us page will soon share our story,
-          mission, values, leadership, and commitment to
-          communities in need.
-        </p>
+      </div>
+    </section>
 
-        <div class="construction-message">
-          <strong>🚧 Website Under Construction</strong><br />
-          We appreciate your patience while we build a
-          meaningful and informative website for Humanity
-          Himalaya.
+
+    <!-- =========================
+         WHO WE ARE
+    ========================= -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Who We Are</div>
+
+          <h2>Humanity First, Wherever Help Is Needed</h2>
+
+          <p>
+            We believe that every person deserves dignity, compassion,
+            safety, opportunity, and hope.
+          </p>
         </div>
 
-        <a class="home-button" href="index.html">
-          ← Back to Home
-        </a>
+        <div class="content-width">
+
+          <p>
+            Humanity Himalaya works to support individuals, families,
+            communities, and animals facing difficult circumstances,
+            including natural disasters, poverty, displacement, health
+            emergencies, food insecurity, financial hardship, and other
+            humanitarian challenges.
+          </p>
+
+          <p>
+            Our work is not limited to one country, one community, one
+            religion, one culture, or one type of assistance. Human needs
+            are diverse, and our approach is designed to respond to those
+            needs with compassion, respect, and responsibility.
+          </p>
+
+          <p>
+            From emergency relief and essential supplies to education,
+            health support, direct assistance, community service, animal
+            welfare, and long-term recovery, we seek to help where our
+            volunteers, resources, partnerships, and capabilities can make
+            a meaningful difference.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         MISSION & VISION
+    ========================= -->
+
+    <section class="section section-light">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Our Purpose</div>
+          <h2>Mission &amp; Vision</h2>
+        </div>
+
+        <div class="mission-grid">
+
+          <div class="mission-card">
+
+            <div class="icon">♥</div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To provide compassionate humanitarian support to people and
+              communities experiencing hardship, while helping individuals
+              move toward greater dignity, stability, opportunity, and
+              hope.
+            </p>
+
+          </div>
+
+
+          <div class="mission-card">
+
+            <div class="icon">◉</div>
+
+            <h3>Our Vision</h3>
+
+            <p>
+              A world where people facing crisis or hardship are not
+              forgotten, where communities can recover with dignity, and
+              where compassion inspires people to help one another across
+              borders, cultures, and circumstances.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         WHAT WE BELIEVE
+    ========================= -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">What We Believe</div>
+          <h2>Every Situation Is Different</h2>
+        </div>
+
+        <div class="belief-box">
+
+          <p>
+            Sometimes a family needs food. Sometimes a child needs school
+            supplies. Sometimes a patient needs blood. Sometimes a disaster
+            survivor needs emergency financial assistance. Sometimes an
+            elderly person needs support. Sometimes an animal needs rescue
+            and care.
+          </p>
+
+          <br />
+
+          <p>
+            We believe humanitarian work begins by understanding the need
+            and then directing available resources toward practical,
+            compassionate solutions.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         OUR VALUES
+    ========================= -->
+
+    <section class="section section-light">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="kicker">Our Values</div>
+
+          <h2>How We Approach Humanitarian Service</h2>
+
+          <p>
+            Our work is guided by principles that place people and
+            communities at the center of everything we do.
+          </p>
+        </div>
+
+
+        <div class="values-grid">
+
+          <div class="value-card">
+            <div class="value-number">01</div>
+            <h3>Compassion</h3>
+            <p>
+              We believe kindness and empathy can make a meaningful
+              difference in someone's most difficult moments.
+            </p>
+          </div>
+
+
+          <div class="value-card">
+            <div class="value-number">02</div>
+            <h3>Dignity</h3>
+            <p>
+              We seek to treat every individual with respect and recognize
+              their inherent dignity.
+            </p>
+          </div>
+
+
+          <div class="value-card">
+            <div class="value-number">03</div>
+            <h3>Respect</h3>
+            <p>
+              We respect different cultures, communities, traditions,
+              backgrounds, beliefs, and individual circumstances.
+            </p>
+          </div>
+
+
+          <div class="value-card">
+            <div class="value-number">04</div>
+            <h3>Responsibility</h3>
+            <p>
+              We strive to use volunteer time, donations, and available
+              resources thoughtfully and responsibly.
+            </p>
+          </div>
+
+
+          <div class="value-card">
+            <div class="value-number">05</div>
+            <h3>Transparency</h3>
+            <p>
+              We value clear communication and responsible stewardship of
+              resources entrusted to humanitarian work.
+            </p>
+          </div>
+
+
+          <div class="value-card">
+            <div class="value-number">06</div>
+            <h3>Community</h3>
+            <p>
+              We believe people working together can create stronger,
+              healthier, and more resilient communities.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         AREAS OF SUPPORT
+    ========================= -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="kicker">Our Commitment</div>
+
+          <h2>Many Needs. One Humanitarian Purpose.</h2>
+
+          <p>
+            Humanitarian support can take many forms. Depending on the
+            situation and available resources, our work may include:
+          </p>
+
+        </div>
+
+
+        <div class="support-grid">
+
+          <div class="support-card">
+
+            <div class="support-icon">+</div>
+
+            <div>
+              <h3>Emergency &amp; Disaster Relief</h3>
+
+              <p>
+                Supporting people affected by floods, earthquakes,
+                landslides, storms, fires, and other emergencies.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">♥</div>
+
+            <div>
+              <h3>Food &amp; Essential Needs</h3>
+
+              <p>
+                Helping provide food, safe drinking water, clothing,
+                blankets, hygiene supplies, household necessities,
+                health-related support, educational resources, and other
+                assistance needed to navigate hardship and rebuild lives.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">+</div>
+
+            <div>
+              <h3>Health &amp; Medical Support</h3>
+
+              <p>
+                Supporting blood donation efforts, access to health
+                resources, medical assistance, emergency needs, and other
+                health-related humanitarian support.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">◆</div>
+
+            <div>
+              <h3>Education &amp; Learning</h3>
+
+              <p>
+                Supporting children, students, and communities through
+                school supplies, educational resources, learning
+                opportunities, scholarships, and other education-focused
+                initiatives.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">★</div>
+
+            <div>
+              <h3>Children &amp; Youth</h3>
+
+              <p>
+                Helping vulnerable children and young people with
+                necessities, education, encouragement, safety, and
+                opportunities for growth.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">♥</div>
+
+            <div>
+              <h3>Women &amp; Families</h3>
+
+              <p>
+                Supporting women and families facing financial hardship,
+                displacement, disaster, or other challenging circumstances.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">+</div>
+
+            <div>
+              <h3>Elderly &amp; Vulnerable People</h3>
+
+              <p>
+                Providing compassionate assistance to older adults, people
+                living alone, people with disabilities, and others who may
+                need additional support.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">↗</div>
+
+            <div>
+              <h3>Livelihood &amp; Economic Support</h3>
+
+              <p>
+                Where resources allow, supporting individuals and families
+                as they work toward financial stability, restored
+                livelihoods, and greater self-sufficiency.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">⌂</div>
+
+            <div>
+              <h3>Housing &amp; Recovery</h3>
+
+              <p>
+                Helping families affected by disasters or severe hardship
+                with temporary shelter, household necessities, recovery,
+                and rebuilding needs.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">◉</div>
+
+            <div>
+              <h3>Emotional &amp; Spiritual Well-Being</h3>
+
+              <p>
+                Recognizing the importance of hope, encouragement,
+                community connection, emotional support, and, where
+                appropriate and welcomed, spiritual or faith-sensitive
+                support that respects individual beliefs and traditions.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">♥</div>
+
+            <div>
+              <h3>Animal Rescue &amp; Welfare</h3>
+
+              <p>
+                Helping animals affected by disasters and hardship through
+                rescue, food, shelter, safety, and compassionate care.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="support-card">
+
+            <div class="support-icon">◎</div>
+
+            <div>
+              <h3>Community Development</h3>
+
+              <p>
+                Supporting community-led efforts that strengthen
+                cooperation, preparedness, education, resilience, and
+                long-term well-being.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         NEPAL
+    ========================= -->
+
+    <section class="section nepal-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="kicker">Our Roots &amp; Our Work</div>
+
+          <h2>Serving Communities in Nepal and Beyond</h2>
+
+          <p>
+            Nepal is an important part of Humanity Himalaya's humanitarian
+            journey, while our vision extends beyond any single country.
+          </p>
+
+        </div>
+
+
+        <div class="nepal-content">
+
+          <p>
+            In Nepal, our volunteers have participated in humanitarian
+            efforts to support people affected by difficult circumstances
+            and emergencies.
+          </p>
+
+          <p>
+            Our activities include blood donation efforts, collecting and
+            distributing essential supplies, helping vulnerable families,
+            providing direct assistance when appropriate, and helping
+            animals affected by disasters and hardship.
+          </p>
+
+          <p>
+            These efforts reflect a larger belief: meaningful humanitarian
+            service can begin with one person, one family, one volunteer,
+            or one community taking action to help another.
+          </p>
+
+
+          <div class="nepal-highlight">
+
+            <div class="nepal-highlight-card">
+              <h3>Blood Donation</h3>
+              <p>
+                Volunteers can help support patients and communities through
+                blood donation efforts during times of need.
+              </p>
+            </div>
+
+
+            <div class="nepal-highlight-card">
+              <h3>Relief Distribution</h3>
+              <p>
+                Collecting, organizing, packing, and distributing essential
+                items to people and families experiencing hardship.
+              </p>
+            </div>
+
+
+            <div class="nepal-highlight-card">
+              <h3>Helping Animals</h3>
+              <p>
+                Extending compassion to animals affected by emergencies,
+                displacement, injury, or lack of basic care.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DIRECT ASSISTANCE
+    ========================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="direct-assistance">
+
+          <h2>Direct Humanitarian Assistance</h2>
+
+          <p>
+            Sometimes the most helpful response is direct assistance.
+            When appropriate and when resources are available, Humanity
+            Himalaya may provide direct financial or material assistance to
+            individuals and families experiencing verified humanitarian
+            needs.
+          </p>
+
+          <p>
+            The goal is simple: help reach people who need support and
+            provide practical assistance that can make a meaningful
+            difference in a difficult moment.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         OUR APPROACH
+    ========================= -->
+
+    <section class="section section-light">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="kicker">Our Approach</div>
+
+          <h2>From Immediate Relief to Long-Term Hope</h2>
+
+          <p>
+            Humanitarian support is not always about solving one immediate
+            problem. Where possible, we seek to support recovery and
+            resilience as well.
+          </p>
+
+        </div>
+
+
+        <div class="approach-list">
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Listen to the needs of individuals and communities.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Respond to urgent humanitarian needs when possible.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Support access to food, water, health, and essential supplies.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Encourage education, learning, and opportunity.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Support children, families, elderly people, and vulnerable individuals.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Support animals affected by emergencies and hardship.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Work with volunteers, donors, and community partners.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Promote dignity, compassion, respect, and responsible action.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Help communities recover and become more resilient.</span>
+          </div>
+
+          <div class="approach-item">
+            <span class="approach-check">✓</span>
+            <span>Extend hope and humanitarian support beyond borders.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION & HUMAN DEVELOPMENT
+    ========================= -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="kicker">Beyond Emergency Relief</div>
+
+          <h2>Education, Opportunity &amp; Human Development</h2>
+
+        </div>
+
+        <div class="content-width">
+
+          <p>
+            Humanitarian work is not only about responding when a disaster
+            happens. It is also about helping people build stronger and
+            more hopeful futures.
+          </p>
+
+          <p>
+            Where possible, Humanity Himalaya seeks to support education,
+            access to learning, children and youth development, skills and
+            knowledge, community awareness, preparedness, health and
+            well-being, livelihood opportunities, and long-term recovery.
+          </p>
+
+          <p>
+            We believe education can create opportunity, compassion can
+            restore hope, and community support can help people become
+            stronger and more resilient.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GLOBAL VISION
+    ========================= -->
+
+    <section class="section section-light">
+
+      <div class="container">
+
+        <div class="global-vision">
+
+          <div class="hero-kicker">
+            A Global Humanitarian Vision
+          </div>
+
+          <h2>Serving Beyond Borders</h2>
+
+          <p>
+            Human suffering does not stop at national borders. Humanity
+            Himalaya therefore seeks to serve communities wherever there is
+            a genuine humanitarian need and where our volunteers, resources,
+            partnerships, and capabilities can make a meaningful difference.
+          </p>
+
+          <p>
+            Our work may begin with an emergency, but our vision is much
+            broader. We want to build a community of people who believe that
+            helping others is a responsibility shared by all of us.
+          </p>
+
+          <div class="vision-statement">
+            <span>Relieve suffering.</span><br />
+            <span>Restore dignity.</span><br />
+            <span>Rebuild hope.</span><br />
+            Empower communities.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================= -->
+
+    <section class="cta-section">
+
+      <div class="container">
+
+        <h2>Be Part of Humanity in Action</h2>
+
+        <p>
+          Whether through volunteering, donating, sharing resources, or
+          simply helping someone in need, every act of compassion can
+          contribute to meaningful change.
+        </p>
+
+        <div class="cta-buttons">
+
+          <a
+            href="donate.html"
+            class="button button-primary"
+          >
+            Donate Now
+          </a>
+
+          <a
+            href="get-involved.html"
+            class="button button-secondary"
+          >
+            Get Involved
+          </a>
+
+        </div>
 
       </div>
 
@@ -471,7 +1660,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -490,26 +1681,41 @@
   </footer>
 
 
-  <!-- MOBILE MENU -->
+  <!-- =========================
+       MOBILE MENU
+  ========================= -->
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
 
     menuToggle.addEventListener("click", function () {
 
       navLinks.classList.toggle("open");
 
-      const isOpen = navLinks.classList.contains("open");
+      const isOpen =
+        navLinks.classList.contains("open");
 
       menuToggle.setAttribute(
         "aria-expanded",
         isOpen
       );
 
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen
+          ? "Close navigation menu"
+          : "Open navigation menu"
+      );
+
     });
+
   </script>
 
 </body>
 </html>
-```
