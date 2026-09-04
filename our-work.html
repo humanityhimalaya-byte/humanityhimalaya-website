@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
 
   <meta
     name="description"
-    content="Humanity Himalaya — Our Work. Our website is currently under construction."
+    content="Humanity Himalaya works globally to provide humanitarian assistance, disaster relief, community support, animal rescue, and direct assistance to people and families in need."
   />
 
   <meta name="theme-color" content="#102f4f" />
@@ -42,7 +41,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
@@ -51,8 +50,9 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
+      height: auto;
     }
 
     .container {
@@ -73,7 +73,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
     }
 
     /* ---------- NAVIGATION ---------- */
@@ -144,50 +143,22 @@
       cursor: pointer;
     }
 
-    /* ---------- UNDER CONSTRUCTION ---------- */
+    /* ---------- PAGE HERO ---------- */
 
-    .construction {
-      min-height: calc(100vh - 124px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .page-hero {
       background:
         linear-gradient(
           135deg,
           #f5f8fb 0%,
-          #ffffff 50%,
+          #ffffff 55%,
           #f5f8fb 100%
         );
-      padding: 80px 20px;
+      padding: 70px 20px 65px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
     }
 
-    .construction-card {
-      width: min(760px, 100%);
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 65px 50px;
-      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
-    }
-
-    /* Construction sign */
-
-    .construction-sign {
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 30px;
-      background: var(--orange);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 52px;
-      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
-    }
-
-    .construction-kicker {
+    .hero-kicker {
       color: var(--orange);
       text-transform: uppercase;
       font-size: 13px;
@@ -196,51 +167,315 @@
       margin-bottom: 12px;
     }
 
-    .construction h1 {
+    .page-hero h1 {
       color: var(--navy);
-      font-size: clamp(38px, 6vw, 58px);
+      font-size: clamp(40px, 6vw, 62px);
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .construction h1 span {
+    .page-hero h1 span {
       color: var(--orange);
     }
 
-    .construction p {
-      max-width: 610px;
-      margin: 0 auto 18px;
+    .page-hero p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    /* ---------- GENERAL SECTIONS ---------- */
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 45px;
+    }
+
+    .section-label {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
       color: var(--muted);
       font-size: 17px;
     }
 
-    .construction-message {
-      margin-top: 25px;
-      padding: 18px 22px;
-      background: var(--light);
-      border-left: 4px solid var(--orange);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 15px;
-      text-align: left;
+    /* ---------- GLOBAL WORK ---------- */
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
     }
 
-    .home-button {
+    .intro p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 42px;
+    }
+
+    .work-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px 26px;
+      box-shadow: 0 8px 25px rgba(11, 36, 59, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(11, 36, 59, 0.10);
+    }
+
+    .work-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      background: #fff1eb;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .work-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .work-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ---------- NEPAL INTRO ---------- */
+
+    .nepal-intro {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .nepal-intro p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    /* ---------- PHOTO SECTIONS ---------- */
+
+    .photo-section {
+      padding: 70px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .photo-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 55px;
+      align-items: center;
+    }
+
+    .photo-layout.reverse {
+      direction: rtl;
+    }
+
+    .photo-layout.reverse > * {
+      direction: ltr;
+    }
+
+ 
+    .photo-frame {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(11, 36, 59, 0.10);
+    }
+
+    .photo-frame img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .photo-content {
+      max-width: 560px;
+    }
+
+    .photo-number {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .photo-content h3 {
+      color: var(--navy);
+      font-size: clamp(26px, 3vw, 36px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .photo-content p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .photo-content ul {
+      margin: 18px 0 0 20px;
+      color: var(--muted);
+    }
+
+    .photo-content li {
+      margin-bottom: 8px;
+    }
+
+    .photo-caption {
+      font-size: 12px;
+      color: #788591;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* ---------- DIRECT ASSISTANCE ---------- */
+
+    .assistance-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--orange);
+      border-radius: 12px;
+      padding: 32px 35px;
+      max-width: 950px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(11, 36, 59, 0.06);
+    }
+
+    .assistance-box h3 {
+      color: var(--navy);
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .assistance-box p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .assistance-box ul {
+      margin: 15px 0 0 20px;
+      color: var(--muted);
+    }
+
+    .assistance-box li {
+      margin-bottom: 8px;
+    }
+
+    /* ---------- RECOVERY ---------- */
+
+    .recovery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .recovery-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .recovery-card h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .recovery-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+      background: var(--navy);
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .cta h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      margin-bottom: 14px;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #d8e3ec;
+      font-size: 17px;
+    }
+
+    .donate-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
-      min-height: 50px;
-      padding: 0 26px;
+      min-height: 52px;
+      padding: 0 28px;
       border-radius: 8px;
       background: var(--orange);
-      color: #ffffff;
+      color: #fff;
       font-weight: 800;
-      font-size: 14px;
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .home-button:hover {
+    .donate-button:hover {
       background: var(--orange-dark);
       transform: translateY(-2px);
     }
@@ -263,10 +498,24 @@
 
     /* ---------- MOBILE ---------- */
 
-    @media (max-width: 1000px) {
-      .nav-links {
-        gap: 14px;
-        font-size: 13px;
+    @media (max-width: 900px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-layout,
+      .photo-layout.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 30px;
+      }
+
+      .photo-content {
+        max-width: none;
+      }
+
+      .recovery-grid {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -316,23 +565,21 @@
         margin: 7px 0;
       }
 
-      .construction {
-        min-height: calc(100vh - 68px);
-        padding: 50px 15px;
+      .page-hero {
+        padding: 50px 18px;
       }
 
-      .construction-card {
-        padding: 45px 25px;
+      .section,
+      .photo-section {
+        padding: 50px 0;
       }
 
-      .construction-sign {
-        width: 85px;
-        height: 85px;
-        font-size: 42px;
+      .photo-frame {
+        padding: 7px;
       }
 
-      .construction p {
-        font-size: 16px;
+      .assistance-box {
+        padding: 25px 22px;
       }
 
       .footer-bottom {
@@ -350,7 +597,9 @@
 
   <div class="topbar">
     <div class="container topbar-inner">
-      <span>Humanity Himalaya — Relief. Restore. Rebuild.</span>
+      <span>
+        Humanity Himalaya — Relief. Restore. Rebuild.
+      </span>
     </div>
   </div>
 
@@ -358,6 +607,7 @@
   <!-- NAVIGATION -->
 
   <header class="navbar">
+
     <div class="container nav-inner">
 
       <a
@@ -384,27 +634,39 @@
         <ul class="nav-links" id="navLinks">
 
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.html">
+              Home
+            </a>
           </li>
 
           <li>
-            <a  href="about.html">About Us</a>
+            <a href="about.html">
+              About Us
+            </a>
           </li>
 
           <li>
-            <a class="active" href="our-work.html">Our Work</a>
+            <a class="active" href="our-work.html">
+              Our Work
+            </a>
           </li>
 
           <li>
-            <a href="get-involved.html">Get Involved</a>
+            <a href="get-involved.html">
+              Get Involved
+            </a>
           </li>
 
           <li>
-            <a href="news.html">News &amp; Updates</a>
+            <a href="news.html">
+              News &amp; Updates
+            </a>
           </li>
 
           <li>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html">
+              Contact Us
+            </a>
           </li>
 
           <li>
@@ -417,45 +679,687 @@
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- UNDER CONSTRUCTION -->
+  <!-- PAGE HERO -->
 
   <main>
 
-    <section class="construction">
+    <section class="page-hero">
 
-      <div class="construction-card">
+      <div class="container">
 
-        <!-- Construction Sign -->
-        <div class="construction-sign" aria-hidden="true">
-          🚧
-        </div>
-
-        <div class="construction-kicker">
+        <div class="hero-kicker">
           Humanity Himalaya
         </div>
 
         <h1>
-          Our Work
-          <span>Coming Soon</span>
+          Our <span>Work</span>
         </h1>
 
         <p>
-          We are currently building this section of the
-          Humanity Himalaya website.
+          We believe humanitarian action begins with compassion and
+          becomes meaningful through action. Humanity Himalaya works
+          to support people, families, communities, and animals
+          affected by disasters, poverty, displacement, and other
+          difficult circumstances.
         </p>
 
-        <div class="construction-message">
-          <strong>🚧 Website Under Construction</strong><br />
-          We appreciate your patience while we build a
-          meaningful and informative website for Humanity
-          Himalaya.
+      </div>
+
+    </section>
+
+
+    <!-- GLOBAL WORK -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Our Global Mission
+          </div>
+
+          <h2>
+            Helping People Wherever Help Is Needed
+          </h2>
+
+          <p>
+            Humanity Himalaya is committed to humanitarian service
+            beyond any single country or community. Our goal is to
+            respond to urgent needs while supporting dignity,
+            recovery, resilience, and hope.
+          </p>
+
         </div>
 
-        <a class="home-button" href="index.html">
-          ← Back to Home
+
+        <div class="intro">
+
+          <p>
+            Our work may include emergency assistance following
+            natural disasters, support for vulnerable families,
+            access to essential supplies, community-based assistance,
+            and initiatives that help people recover after a crisis.
+          </p>
+
+          <p>
+            We believe assistance should reach people with compassion,
+            respect, transparency, and a focus on genuine need.
+          </p>
+
+        </div>
+
+
+        <div class="work-grid">
+
+          <div class="work-card">
+
+            <div class="work-icon">
+              🆘
+            </div>
+
+            <h3>
+              Disaster Relief
+            </h3>
+
+            <p>
+              Supporting communities affected by floods,
+              landslides, earthquakes, storms, fires, and
+              other emergencies with essential humanitarian
+              assistance.
+            </p>
+
+          </div>
+
+
+          <div class="work-card">
+
+            <div class="work-icon">
+              🍚
+            </div>
+
+            <h3>
+              Food &amp; Essential Supplies
+            </h3>
+
+            <p>
+           Helping individuals and families meet essential needs—including food, safe drinking water, clothing, shelter, hygiene supplies, household necessities, health-related support, educational resources, and other assistance needed to navigate hardship and rebuild their lives.
+            </p>
+
+          </div>
+
+
+          <div class="work-card">
+
+            <div class="work-icon">
+              🏠
+            </div>
+
+            <h3>
+              Recovery &amp; Rebuilding
+            </h3>
+
+            <p>
+              Supporting individuals and communities as they
+              begin rebuilding their lives, homes, livelihoods,
+              and sense of stability after a crisis.
+            </p>
+
+          </div>
+
+
+          <div class="work-card">
+
+            <div class="work-icon">
+              ❤️
+            </div>
+
+            <h3>
+              Support for Vulnerable Families
+            </h3>
+
+            <p>
+              Providing assistance to families and individuals
+              experiencing severe hardship, displacement,
+              loss, or other urgent humanitarian needs.
+            </p>
+
+          </div>
+
+
+          <div class="work-card">
+
+            <div class="work-icon">
+              🐾
+            </div>
+
+            <h3>
+              Animal Welfare
+            </h3>
+
+            <p>
+              Recognizing that animals are also affected by
+              disasters, we support compassionate rescue,
+              protection, food, shelter, and emergency care
+              when possible.
+            </p>
+
+          </div>
+
+
+          <div class="work-card">
+
+            <div class="work-icon">
+              🤝
+            </div>
+
+            <h3>
+              Community Volunteers
+            </h3>
+
+            <p>
+              Working with volunteers and community members
+              who are willing to give their time, skills,
+              resources, and compassion to help others.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEPAL -->
+
+    <section class="section section-light">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Nepal
+          </div>
+
+          <h2>
+            Our Work in Nepal
+          </h2>
+
+          <p>
+            Nepal holds a special place in our humanitarian mission.
+            When communities are affected by disaster, we believe
+            help should reach people quickly, respectfully, and
+            directly.
+          </p>
+
+        </div>
+
+
+        <div class="nepal-intro">
+
+          <p>
+            In response to emergencies such as the devastating
+            2026 floods, our volunteers and supporters can contribute
+            through blood donation, collection and distribution of
+            essential supplies, financial assistance, animal rescue,
+            and other forms of humanitarian support.
+          </p>
+
+          <p>
+            Our approach is centered on people. We listen to the
+            needs of affected communities and work to direct
+            assistance toward those who need it most.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PHOTO 1: BLOOD DONATION -->
+
+    <section class="photo-section">
+
+      <div class="container">
+
+        <div class="photo-layout">
+
+          <div class="photo-frame">
+
+            <img
+              src="do_3.jpg"
+              alt="Humanity Himalaya volunteers participating in a blood donation effort to support people affected by the disaster"
+              loading="lazy"
+            />
+
+            <div class="photo-caption">
+              Humanity Himalaya volunteer humanitarian effort
+            </div>
+
+          </div>
+
+
+          <div class="photo-content">
+
+            <div class="photo-number">
+              Emergency Response
+            </div>
+
+            <h3>
+              Giving Blood to Help Save Lives
+            </h3>
+
+            <p>
+              During an emergency, injured people may require
+              urgent medical treatment and blood. Our volunteers
+              believe that one of the most direct ways to help
+              is to give what we can.
+            </p>
+
+            <p>
+              Blood donation is a simple but powerful act of
+              solidarity. Our volunteers participate in blood
+              donation efforts to support people affected by
+              emergencies and help strengthen the community's
+              response when medical needs increase.
+            </p>
+
+            <ul>
+              <li>Supporting emergency medical needs</li>
+              <li>Encouraging community blood donation</li>
+              <li>Standing with families during times of crisis</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PHOTO 2: BLOOD DONATION -->
+
+    <section class="photo-section section-light">
+
+      <div class="container">
+
+        <div class="photo-layout reverse">
+
+          <div class="photo-frame">
+
+            <img
+              src="do_4.jpg"
+              alt="Humanity Himalaya volunteers donating blood as part of humanitarian disaster relief"
+              loading="lazy"
+            />
+
+            <div class="photo-caption">
+              Volunteers supporting emergency blood donation efforts
+            </div>
+
+          </div>
+
+
+          <div class="photo-content">
+
+            <div class="photo-number">
+              Compassion in Action
+            </div>
+
+            <h3>
+              Volunteers Turning Compassion Into Action
+            </h3>
+
+            <p>
+              Humanitarian work is not only about financial
+              contributions. It is also about showing up,
+              volunteering time, giving blood, organizing
+              resources, and helping people when they are most
+              vulnerable.
+            </p>
+
+            <p>
+              Our volunteers are part of a community that believes
+              everyone can contribute something. A single act of
+              generosity can become part of a much larger effort
+              to protect lives and support recovery.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PHOTO 3: COLLECTION / PACKING / DISTRIBUTION -->
+
+    <section class="photo-section">
+
+      <div class="container">
+
+        <div class="photo-layout">
+
+          <div class="photo-frame">
+
+            <img
+              src="do_1.jpg"
+              alt="Humanity Himalaya volunteers collecting, packing and distributing relief supplies to people affected by disaster"
+              loading="lazy"
+            />
+       <img
+              src="do_5.jpg"
+              alt="Humanity Himalaya volunteers collecting, packing and distributing relief supplies to people affected by disaster"
+              loading="lazy"
+            />
+            <div class="photo-caption">
+              Collection, packing and distribution of relief supplies
+            </div>
+
+          </div>
+
+
+          <div class="photo-content">
+
+            <div class="photo-number">
+              Relief Supplies
+            </div>
+
+            <h3>
+              Collecting, Packing &amp; Delivering Essential Supplies
+            </h3>
+
+            <p>
+              After a disaster, families can lose access to the
+              basic necessities of everyday life. Food, clothing,
+              blankets, hygiene supplies, water, household items,
+              and other essentials can become urgently needed.
+            </p>
+
+            <p>
+              Our volunteers help collect available resources,
+              organize them, pack relief materials, and support
+              distribution to affected people and families.
+            </p>
+
+            <ul>
+              <li>Collecting donated goods</li>
+              <li>Sorting and organizing supplies</li>
+              <li>Packing emergency relief packages</li>
+              <li>Supporting distribution to affected families</li>
+              <li>Prioritizing urgent and essential needs</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PHOTO 4: ANIMAL RESCUE -->
+
+    <section class="photo-section section-light">
+
+      <div class="container">
+
+        <div class="photo-layout reverse">
+
+          <div class="photo-frame">
+
+            <img
+              src="do_2.jpg"
+              alt="Humanity Himalaya volunteers helping animals affected by disaster"
+              loading="lazy"
+            />
+
+            <div class="photo-caption">
+              Helping animals affected by disaster
+            </div>
+
+          </div>
+
+
+          <div class="photo-content">
+
+            <div class="photo-number">
+              Animal Rescue &amp; Welfare
+            </div>
+
+            <h3>
+              Protecting Animals When Disaster Strikes
+            </h3>
+
+            <p>
+              Disasters do not affect humans alone. Dogs, cats,
+              livestock, and other animals can be injured, trapped,
+              displaced, or left without food and shelter.
+            </p>
+
+            <p>
+              Humanity Himalaya believes compassion should extend
+              to animals as well. Where possible, our humanitarian
+              efforts include helping rescue, protect, feed, and
+              provide assistance to animals affected by emergencies.
+            </p>
+
+            <ul>
+              <li>Helping animals in emergency situations</li>
+              <li>Supporting food and basic care</li>
+              <li>Helping animals reach safety</li>
+              <li>Supporting compassionate community response</li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DIRECT FINANCIAL ASSISTANCE -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Direct Assistance
+          </div>
+
+          <h2>
+            Helping Families Directly
+          </h2>
+
+          <p>
+            Sometimes the most useful assistance is flexible
+            assistance that allows a family to address its own
+            most urgent needs.
+          </p>
+
+        </div>
+
+
+        <div class="assistance-box">
+
+          <h3>
+            Direct Financial Support
+          </h3>
+
+          <p>
+            When appropriate and when resources allow, Humanity
+            Himalaya provides financial assistance directly to
+            affected individuals and families.
+          </p>
+
+          <p>
+            Direct assistance can help families address urgent
+            needs that may not be fully met through standard
+            relief packages.
+          </p>
+
+          <ul>
+            <li>
+              Emergency household needs
+            </li>
+
+            <li>
+              Food and essential living expenses
+            </li>
+
+            <li>
+              Temporary accommodation and recovery needs
+            </li>
+
+            <li>
+              Urgent family expenses following a disaster
+            </li>
+
+            <li>
+              Other verified humanitarian needs
+            </li>
+          </ul>
+
+          <p style="margin-top:18px;">
+            Our goal is to treat people with dignity and provide
+            assistance based on genuine need.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LONG TERM RECOVERY -->
+
+    <section class="section section-light">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Beyond Emergency Relief
+          </div>
+
+          <h2>
+            From Relief to Recovery
+          </h2>
+
+          <p>
+            Humanitarian assistance should not end when the immediate
+            emergency is over.
+          </p>
+
+        </div>
+
+
+        <div class="recovery-grid">
+
+          <div class="recovery-card">
+
+            <h3>
+              Rebuilding Lives
+            </h3>
+
+            <p>
+              We seek to support families as they move from
+              immediate survival toward stability and recovery.
+            </p>
+
+          </div>
+
+
+          <div class="recovery-card">
+
+            <h3>
+              Community Resilience
+            </h3>
+
+            <p>
+              Strong communities are better able to prepare for,
+              respond to, and recover from future emergencies.
+            </p>
+
+          </div>
+
+
+          <div class="recovery-card">
+
+            <h3>
+              Dignity &amp; Respect
+            </h3>
+
+            <p>
+              Every person receiving assistance deserves to be
+              treated with respect, compassion, and dignity.
+            </p>
+
+          </div>
+
+
+          <div class="recovery-card">
+
+            <h3>
+              Responsible Giving
+            </h3>
+
+            <p>
+              We aim to use donated resources responsibly and
+              direct assistance toward meaningful humanitarian
+              needs.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Be Part of the Work
+        </h2>
+
+        <p>
+          Whether through volunteering, donating, sharing
+          resources, or simply spreading awareness, every
+          contribution can help us reach people and communities
+          in need.
+        </p>
+
+        <a class="donate-button" href="donate.html">
+          Donate Now
         </a>
 
       </div>
@@ -487,14 +1391,19 @@
   <!-- MOBILE MENU -->
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
 
     menuToggle.addEventListener("click", function () {
 
       navLinks.classList.toggle("open");
 
-      const isOpen = navLinks.classList.contains("open");
+      const isOpen =
+        navLinks.classList.contains("open");
 
       menuToggle.setAttribute(
         "aria-expanded",
@@ -502,8 +1411,8 @@
       );
 
     });
+
   </script>
 
 </body>
 </html>
-```
