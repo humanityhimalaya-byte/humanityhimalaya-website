@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +6,12 @@
 
   <meta
     name="description"
-    content="Humanity Himalaya — Our website is currently under construction."
+    content="Get involved with Humanity Himalaya through volunteering, donations, fundraising, sponsorship, partnerships, and community support."
   />
 
   <meta name="theme-color" content="#102f4f" />
 
-  <title>Our Work | Humanity Himalaya</title>
+  <title>Get Involved | Humanity Himalaya</title>
 
   <style>
     :root {
@@ -144,105 +143,255 @@
       cursor: pointer;
     }
 
-    /* ---------- UNDER CONSTRUCTION ---------- */
+    /* ---------- PAGE HERO ---------- */
 
-    .construction {
-      min-height: calc(100vh - 124px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .page-hero {
       background:
         linear-gradient(
           135deg,
           #f5f8fb 0%,
-          #ffffff 50%,
-          #f5f8fb 100%
+          #ffffff 55%,
+          #fff5ef 100%
         );
-      padding: 80px 20px;
+      padding: 48px 20px 42px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
     }
 
-    .construction-card {
-      width: min(760px, 100%);
+    .hero-kicker {
+      color: var(--orange);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .page-hero h1 {
+      color: var(--navy);
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .page-hero h1 span {
+      color: var(--orange);
+    }
+
+    .page-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* ---------- INTRO ---------- */
+
+    .intro {
+      padding: 38px 20px 28px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* ---------- INVOLVEMENT CARDS ---------- */
+
+    .involvement {
+      padding: 10px 20px 42px;
+    }
+
+    .involvement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .involvement-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px 22px;
+      box-shadow: 0 8px 25px rgba(11, 36, 59, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .involvement-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(11, 36, 59, 0.10);
+    }
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff1eb;
+      border-radius: 12px;
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+
+    .involvement-card h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 7px;
+    }
+
+    .involvement-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 13px;
+    }
+
+    .involvement-card ul {
+      padding-left: 19px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .involvement-card li {
+      margin-bottom: 5px;
+    }
+
+    /* ---------- FEATURED CTA ---------- */
+
+    .cta-section {
+      padding: 0 20px 45px;
+    }
+
+    .cta-box {
+      background: var(--navy);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 32px 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .cta-box h2 {
+      font-size: 27px;
+      margin-bottom: 5px;
+    }
+
+    .cta-box p {
+      color: #dce8f2;
+      font-size: 15px;
+      max-width: 700px;
+    }
+
+    .cta-button {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 23px;
+      background: var(--orange);
+      color: #ffffff;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- HOW TO HELP ---------- */
+
+    .how-section {
+      background: var(--light);
+      padding: 38px 20px;
+    }
+
+    .how-section h2 {
+      color: var(--navy);
+      text-align: center;
+      font-size: 29px;
+      margin-bottom: 8px;
+    }
+
+    .how-section > .container > p {
+      text-align: center;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 25px;
+      font-size: 15px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .step {
       background: #ffffff;
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 65px 50px;
-      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
+      border-radius: 12px;
+      padding: 21px;
+      text-align: center;
     }
 
-    /* Construction sign */
-
-    .construction-sign {
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 30px;
+    .step-number {
+      width: 38px;
+      height: 38px;
+      margin: 0 auto 10px;
       background: var(--orange);
       color: #ffffff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 52px;
-      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
-    }
-
-    .construction-kicker {
-      color: var(--orange);
-      text-transform: uppercase;
-      font-size: 13px;
       font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
     }
 
-    .construction h1 {
+    .step h3 {
       color: var(--navy);
-      font-size: clamp(38px, 6vw, 58px);
-      line-height: 1.1;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 5px;
     }
 
-    .construction h1 span {
-      color: var(--orange);
-    }
-
-    .construction p {
-      max-width: 610px;
-      margin: 0 auto 18px;
+    .step p {
       color: var(--muted);
-      font-size: 17px;
-    }
-
-    .construction-message {
-      margin-top: 25px;
-      padding: 18px 22px;
-      background: var(--light);
-      border-left: 4px solid var(--orange);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 15px;
-      text-align: left;
-    }
-
-    .home-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 30px;
-      min-height: 50px;
-      padding: 0 26px;
-      border-radius: 8px;
-      background: var(--orange);
-      color: #ffffff;
-      font-weight: 800;
       font-size: 14px;
-      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .home-button:hover {
-      background: var(--orange-dark);
-      transform: translateY(-2px);
+    /* ---------- FINAL MESSAGE ---------- */
+
+    .final-message {
+      padding: 38px 20px 42px;
+      text-align: center;
+    }
+
+    .final-message h2 {
+      color: var(--navy);
+      font-size: 29px;
+      margin-bottom: 8px;
+    }
+
+    .final-message p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 15px;
     }
 
     /* ---------- FOOTER ---------- */
@@ -267,6 +416,10 @@
       .nav-links {
         gap: 14px;
         font-size: 13px;
+      }
+
+      .involvement-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -316,23 +469,60 @@
         margin: 7px 0;
       }
 
-      .construction {
-        min-height: calc(100vh - 68px);
-        padding: 50px 15px;
+      .page-hero {
+        padding: 38px 18px 34px;
       }
 
-      .construction-card {
-        padding: 45px 25px;
-      }
-
-      .construction-sign {
-        width: 85px;
-        height: 85px;
-        font-size: 42px;
-      }
-
-      .construction p {
+      .page-hero p {
         font-size: 16px;
+      }
+
+      .intro {
+        padding: 30px 18px 22px;
+      }
+
+      .intro h2 {
+        font-size: 27px;
+      }
+
+      .involvement {
+        padding: 5px 18px 32px;
+      }
+
+      .involvement-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .involvement-card {
+        padding: 21px 19px;
+      }
+
+      .cta-section {
+        padding: 0 18px 35px;
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 27px 23px;
+      }
+
+      .cta-box h2 {
+        font-size: 24px;
+      }
+
+      .how-section {
+        padding: 32px 18px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .final-message {
+        padding: 32px 18px 35px;
       }
 
       .footer-bottom {
@@ -353,7 +543,6 @@
       <span>Humanity Himalaya — Relief. Restore. Rebuild.</span>
     </div>
   </div>
-
 
   <!-- NAVIGATION -->
 
@@ -388,11 +577,11 @@
           </li>
 
           <li>
-            <a  href="about.html">About Us</a>
+            <a href="about.html">About Us</a>
           </li>
 
           <li>
-            <a  href="our-work.html">Our Work</a>
+            <a href="our-work.html">Our Work</a>
           </li>
 
           <li>
@@ -419,50 +608,312 @@
     </div>
   </header>
 
-
-  <!-- UNDER CONSTRUCTION -->
+  <!-- PAGE HERO -->
 
   <main>
 
-    <section class="construction">
+    <section class="page-hero">
+      <div class="container">
 
-      <div class="construction-card">
-
-        <!-- Construction Sign -->
-        <div class="construction-sign" aria-hidden="true">
-          🚧
-        </div>
-
-        <div class="construction-kicker">
-          Humanity Himalaya
+        <div class="hero-kicker">
+          Join the Movement
         </div>
 
         <h1>
-                  <span>Coming Soon</span>
+          Get <span>Involved</span>
         </h1>
 
         <p>
-          We are currently building this section of the
-          Humanity Himalaya website.
+          Change begins when people come together. Whether you volunteer,
+          donate, fundraise, partner with us, or simply spread the word,
+          your support can help communities recover, rebuild, and move forward.
         </p>
 
-        <div class="construction-message">
-          <strong>🚧 Website Under Construction</strong><br />
-          We appreciate your patience while we build a
-          meaningful and informative website for Humanity
-          Himalaya.
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <section class="intro">
+      <div class="container">
+
+        <h2>There Are Many Ways to Help</h2>
+
+        <p>
+          You do not have to do everything. Choose the way that works best
+          for you and become part of a community committed to helping people
+          in need.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- INVOLVEMENT OPTIONS -->
+
+    <section class="involvement">
+      <div class="container">
+
+        <div class="involvement-grid">
+
+          <!-- VOLUNTEER -->
+
+          <div class="involvement-card">
+
+            <div class="card-icon" aria-hidden="true">
+              🤝
+            </div>
+
+            <h3>Volunteer</h3>
+
+            <p>
+              Give your time, skills, and energy to support Humanity Himalaya
+              and the communities we serve.
+            </p>
+
+            <ul>
+              <li>Help with community activities</li>
+              <li>Support fundraising events</li>
+              <li>Assist with outreach and awareness</li>
+              <li>Share your professional skills</li>
+            </ul>
+
+          </div>
+
+          <!-- DONATE -->
+
+          <div class="involvement-card">
+
+            <div class="card-icon" aria-hidden="true">
+              ❤️
+            </div>
+
+            <h3>Donate</h3>
+
+            <p>
+              Your contribution can help provide essential support to people
+              and communities affected by hardship and disasters.
+            </p>
+
+            <ul>
+              <li>Every contribution matters</li>
+              <li>Support relief efforts</li>
+              <li>Help communities rebuild</li>
+              <li>Make a direct difference</li>
+            </ul>
+
+          </div>
+
+          <!-- FUNDRAISE -->
+
+          <div class="involvement-card">
+
+            <div class="card-icon" aria-hidden="true">
+              📣
+            </div>
+
+            <h3>Fundraise</h3>
+
+            <p>
+              Turn your network, event, or personal passion into an opportunity
+              to help others.
+            </p>
+
+            <ul>
+              <li>Organize a fundraising event</li>
+              <li>Create a community campaign</li>
+              <li>Raise funds with friends and family</li>
+              <li>Support a specific relief effort</li>
+            </ul>
+
+          </div>
+
+          <!-- SPONSOR -->
+
+          <div class="involvement-card">
+
+            <div class="card-icon" aria-hidden="true">
+              🏢
+            </div>
+
+            <h3>Sponsor</h3>
+
+            <p>
+              Businesses, banks, organizations, and community groups can help
+              create a larger and lasting impact.
+            </p>
+
+            <ul>
+              <li>Sponsor a relief initiative</li>
+              <li>Support community events</li>
+              <li>Provide financial or in-kind support</li>
+              <li>Build a long-term partnership</li>
+            </ul>
+
+          </div>
+
+          <!-- PARTNER -->
+
+          <div class="involvement-card">
+
+            <div class="card-icon" aria-hidden="true">
+              🌍
+            </div>
+
+            <h3>Partner With Us</h3>
+
+            <p>
+              We welcome organizations and community groups that share our
+              commitment to humanitarian support and community resilience.
+            </p>
+
+            <ul>
+              <li>Community organizations</li>
+              <li>Nonprofit organizations</li>
+              <li>Businesses and institutions</li>
+              <li>Local and international partners</li>
+            </ul>
+
+          </div>
+
+          <!-- SPREAD THE WORD -->
+
+          <div class="involvement-card">
+
+            <div class="card-icon" aria-hidden="true">
+              📱
+            </div>
+
+            <h3>Spread the Word</h3>
+
+            <p>
+              Awareness is powerful. Help more people discover our mission
+              and learn how they can make a difference.
+            </p>
+
+            <ul>
+              <li>Share our website</li>
+              <li>Share our campaigns</li>
+              <li>Tell your community about us</li>
+              <li>Follow and share our updates</li>
+            </ul>
+
+          </div>
+
         </div>
 
-        <a class="home-button" href="index.html">
-          ← Back to Home
-        </a>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+
+    <section class="cta-section">
+      <div class="container">
+
+        <div class="cta-box">
+
+          <div>
+            <h2>Ready to Make a Difference?</h2>
+
+            <p>
+              Whether you want to volunteer, support a campaign, sponsor an
+              initiative, or simply learn more, we would love to hear from you.
+            </p>
+          </div>
+
+          <a class="cta-button" href="contact.html">
+            Contact Us
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how-section">
+
+      <div class="container">
+
+        <h2>Getting Started Is Easy</h2>
+
+        <p>
+          A small action can become part of something much bigger.
+        </p>
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <h3>Choose How to Help</h3>
+
+            <p>
+              Decide whether you would like to volunteer, donate, fundraise,
+              sponsor, partner, or spread awareness.
+            </p>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <h3>Reach Out</h3>
+
+            <p>
+              Contact Humanity Himalaya and tell us how you would like
+              to get involved.
+            </p>
+
+          </div>
+
+          <div class="step">
+
+            <div class="step-number">
+              3
+            </div>
+
+            <h3>Make an Impact</h3>
+
+            <p>
+              Work with us to turn your support into meaningful action
+              for communities in need.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FINAL MESSAGE -->
+
+    <section class="final-message">
+
+      <div class="container">
+
+        <h2>Together, We Can Do More</h2>
+
+        <p>
+          Humanity Himalaya believes that meaningful change happens when
+          people come together with compassion, responsibility, and a
+          willingness to help. Your involvement can be the beginning of
+          someone else's hope.
+        </p>
 
       </div>
 
     </section>
 
   </main>
-
 
   <!-- FOOTER -->
 
@@ -481,7 +932,6 @@
     </div>
 
   </footer>
-
 
   <!-- MOBILE MENU -->
 
@@ -505,4 +955,3 @@
 
 </body>
 </html>
-```
