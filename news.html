@@ -7,12 +7,12 @@
 
   <meta
     name="description"
-    content="Humanity Himalaya — Our website is currently under construction."
+    content="Humanity Himalaya — News and updates about the Nepal humanitarian crisis and relief efforts."
   />
 
   <meta name="theme-color" content="#102f4f" />
 
-  <title>Our Work | Humanity Himalaya</title>
+  <title>News &amp; Updates | Humanity Himalaya</title>
 
   <style>
     :root {
@@ -42,7 +42,7 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--white);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
@@ -66,14 +66,13 @@
       background: var(--navy-dark);
       color: #dce8f2;
       font-size: 13px;
-      padding: 8px 0;
+      padding: 7px 0;
     }
 
     .topbar-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
     }
 
     /* ---------- NAVIGATION ---------- */
@@ -110,7 +109,6 @@
     }
 
     .nav-links a {
-      position: relative;
       color: #26384a;
       padding: 28px 0;
       transition: color 0.2s ease;
@@ -144,95 +142,188 @@
       cursor: pointer;
     }
 
-    /* ---------- UNDER CONSTRUCTION ---------- */
+    /* ---------- NEWS HEADER ---------- */
 
-    .construction {
-      min-height: calc(100vh - 124px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .news-header {
+      background: var(--light);
       text-align: center;
-      background:
-        linear-gradient(
-          135deg,
-          #f5f8fb 0%,
-          #ffffff 50%,
-          #f5f8fb 100%
-        );
-      padding: 80px 20px;
+      padding: 35px 20px 30px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .construction-card {
-      width: min(760px, 100%);
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 65px 50px;
-      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
-    }
-
-    /* Construction sign */
-
-    .construction-sign {
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 30px;
-      background: var(--orange);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 52px;
-      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
-    }
-
-    .construction-kicker {
+    .news-kicker {
       color: var(--orange);
       text-transform: uppercase;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 900;
       letter-spacing: 2px;
-      margin-bottom: 12px;
+      margin-bottom: 6px;
     }
 
-    .construction h1 {
+    .news-header h1 {
       color: var(--navy);
-      font-size: clamp(38px, 6vw, 58px);
+      font-size: clamp(34px, 5vw, 50px);
       line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .news-header h1 span {
+      color: var(--orange);
+    }
+
+    .news-header p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ---------- NEWS SECTION ---------- */
+
+    .news-section {
+      padding: 35px 20px 45px;
+      background: #ffffff;
+    }
+
+    .news-card {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(11, 36, 59, 0.08);
+    }
+
+    /* ---------- NEWS IMAGE ---------- */
+
+    .news-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      background: #eeeeee;
+    }
+
+    .image-caption {
+      padding: 8px 20px;
+      background: #f4f6f8;
+      color: #68747e;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    /* ---------- NEWS CONTENT ---------- */
+
+    .news-content {
+      padding: 30px 40px 35px;
+    }
+
+    .news-date {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 7px;
+    }
+
+    .news-content h2 {
+      color: var(--navy);
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.2;
       margin-bottom: 20px;
     }
 
-    .construction h1 span {
-      color: var(--orange);
+    .news-content p {
+      color: #44515d;
+      font-size: 16px;
+      margin-bottom: 16px;
     }
 
-    .construction p {
-      max-width: 610px;
-      margin: 0 auto 18px;
-      color: var(--muted);
+    /* ---------- CRISIS BOX ---------- */
+
+    .crisis-box {
+      margin: 22px 0;
+      padding: 18px 22px;
+      background: #fff7f3;
+      border-left: 4px solid var(--orange);
+      border-radius: 6px;
+    }
+
+    .crisis-box strong {
+      color: var(--navy);
+      display: block;
+      margin-bottom: 4px;
       font-size: 17px;
     }
 
-    .construction-message {
+    /* ---------- HUMANITY HIMALAYA ---------- */
+
+    .response-box {
       margin-top: 25px;
-      padding: 18px 22px;
+      padding: 20px 22px;
       background: var(--light);
-      border-left: 4px solid var(--orange);
+      border: 1px solid var(--border);
       border-radius: 8px;
-      color: var(--text);
-      font-size: 15px;
-      text-align: left;
     }
 
-    .home-button {
+    .response-box h3 {
+      color: var(--navy);
+      margin-bottom: 7px;
+      font-size: 20px;
+    }
+
+    .response-box p {
+      margin-bottom: 12px;
+    }
+
+    .response-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---------- SOURCE ---------- */
+
+    .source-note {
+      margin-top: 22px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      color: #697681;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* ---------- DONATE CTA ---------- */
+
+    .news-cta {
+      max-width: 1000px;
+      margin: 25px auto 0;
+      padding: 28px 25px;
+      background: var(--navy);
+      color: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .news-cta h2 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .news-cta p {
+      max-width: 650px;
+      margin: 0 auto 17px;
+      color: #dce8f2;
+      font-size: 15px;
+    }
+
+    .donate-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
-      min-height: 50px;
-      padding: 0 26px;
-      border-radius: 8px;
+      min-height: 46px;
+      padding: 0 25px;
+      border-radius: 7px;
       background: var(--orange);
       color: #ffffff;
       font-weight: 800;
@@ -240,7 +331,7 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .home-button:hover {
+    .donate-button:hover {
       background: var(--orange-dark);
       transform: translateY(-2px);
     }
@@ -253,7 +344,7 @@
     }
 
     .footer-bottom {
-      min-height: 65px;
+      min-height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -264,13 +355,16 @@
     /* ---------- MOBILE ---------- */
 
     @media (max-width: 1000px) {
+
       .nav-links {
         gap: 14px;
         font-size: 13px;
       }
+
     }
 
     @media (max-width: 760px) {
+
       .topbar {
         display: none;
       }
@@ -316,30 +410,42 @@
         margin: 7px 0;
       }
 
-      .construction {
-        min-height: calc(100vh - 68px);
-        padding: 50px 15px;
+      .news-header {
+        padding: 28px 15px 25px;
       }
 
-      .construction-card {
-        padding: 45px 25px;
+      .news-section {
+        padding: 25px 12px 35px;
       }
 
-      .construction-sign {
-        width: 85px;
-        height: 85px;
-        font-size: 42px;
+      .news-content {
+        padding: 24px 20px 28px;
       }
 
-      .construction p {
-        font-size: 16px;
+      .news-content h2 {
+        font-size: 27px;
+      }
+
+      .news-content p {
+        font-size: 15px;
+      }
+
+      .crisis-box,
+      .response-box {
+        padding: 17px;
+      }
+
+      .news-cta {
+        margin-top: 20px;
+        padding: 25px 18px;
       }
 
       .footer-bottom {
         flex-direction: column;
         justify-content: center;
-        padding: 18px 0;
+        padding: 17px 0;
       }
+
     }
   </style>
 </head>
@@ -349,15 +455,22 @@
   <!-- TOP INFORMATION BAR -->
 
   <div class="topbar">
+
     <div class="container topbar-inner">
-      <span>Humanity Himalaya — Relief. Restore. Rebuild.</span>
+
+      <span>
+        Humanity Himalaya — Relief. Restore. Rebuild.
+      </span>
+
     </div>
+
   </div>
 
 
   <!-- NAVIGATION -->
 
   <header class="navbar">
+
     <div class="container nav-inner">
 
       <a
@@ -371,6 +484,7 @@
         />
       </a>
 
+
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -380,31 +494,45 @@
         ☰
       </button>
 
+
       <nav>
+
         <ul class="nav-links" id="navLinks">
 
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.html">
+              Home
+            </a>
           </li>
 
           <li>
-            <a  href="about.html">About Us</a>
+            <a href="about.html">
+              About Us
+            </a>
           </li>
 
           <li>
-            <a  href="our-work.html">Our Work</a>
+            <a href="our-work.html">
+              Our Work
+            </a>
           </li>
 
           <li>
-            <a  href="get-involved.html">Get Involved</a>
+            <a href="get-involved.html">
+              Get Involved
+            </a>
           </li>
 
           <li>
-            <a class="active" href="news.html">News &amp; Updates</a>
+            <a class="active" href="news.html">
+              News &amp; Updates
+            </a>
           </li>
 
           <li>
-            <a href="contact.html">Contact Us</a>
+            <a href="contact.html">
+              Contact Us
+            </a>
           </li>
 
           <li>
@@ -414,47 +542,187 @@
           </li>
 
         </ul>
+
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- UNDER CONSTRUCTION -->
+  <!-- NEWS HEADER -->
 
   <main>
 
-    <section class="construction">
+    <section class="news-header">
 
-      <div class="construction-card">
+      <div class="news-kicker">
+        Humanity Himalaya
+      </div>
 
-        <!-- Construction Sign -->
-        <div class="construction-sign" aria-hidden="true">
-          🚧
+      <h1>
+        News &amp; <span>Updates</span>
+      </h1>
+
+      <p>
+        Updates about humanitarian emergencies, relief efforts,
+        and the communities we serve.
+      </p>
+
+    </section>
+
+
+    <!-- NEWS ARTICLE -->
+
+    <section class="news-section">
+
+      <article class="news-card">
+
+
+        <!--
+          IMPORTANT:
+
+          Put your REAL high-resolution photograph here:
+
+       NepalFlood.jpg
+
+          The image is intentionally NOT given a fixed height.
+          It will display using its original aspect ratio.
+        -->
+
+        <img
+          class="news-image"
+          src="NepalFlood.jpg"
+          alt="Devastation following the August 26, 2026 flood disaster in Nepal"
+        />
+       <!-- ARTICLE TEXT -->
+
+        <div class="news-content">
+
+          <div class="news-date">
+            August 26, 2026
+          </div>
+
+          <h2>
+            Catastrophic Flash Flood Devastates Communities in Nepal
+          </h2>
+
+          <p>
+            Nepal was struck by a catastrophic flash flood on
+            August 26, 2026, following an ice-and-rock avalanche
+            and glacier-related slope failure in the Himalayan
+            border region.
+          </p>
+
+          <p>
+            The resulting surge of water, mud, rock and debris
+            travelled downstream through the affected river
+            systems, causing widespread destruction across
+            communities.
+          </p>
+
+
+          <p>
+            Homes, roads, bridges, hydropower facilities and
+            other critical infrastructure have been severely
+            damaged or destroyed. Entire communities have been
+            displaced, while families continue to search for
+            loved ones who remain missing.
+          </p>
+
+
+          <div class="crisis-box">
+
+            <strong>
+              Nepal is facing an extremely serious humanitarian crisis.
+            </strong>
+
+            Entire communities have been devastated, and
+            affected families urgently need humanitarian
+            assistance as rescue, recovery and relief operations
+            continue.
+
+          </div>
+
+
+          <p>
+            Search-and-rescue teams and government agencies
+            continue working to reach affected communities,
+            recover victims, evacuate survivors and provide
+            emergency assistance.
+          </p>
+
+
+          <p>
+            The scale of the destruction has created enormous
+            challenges for families who have lost homes,
+            livelihoods, transportation routes and access to
+            essential services.
+          </p>
+
+
+          <!-- HUMANITY HIMALAYA RESPONSE -->
+
+          <div class="response-box">
+
+            <h3>
+              Humanity Himalaya's Commitment
+            </h3>
+
+            <p>
+              Humanity Himalaya stands with the people and
+              communities affected by this devastating disaster.
+            </p>
+
+            <p>
+              We are committed to supporting humanitarian relief,
+              recovery and rebuilding efforts where assistance
+              is most needed, with a focus on vulnerable families
+              and communities affected by the disaster.
+            </p>
+
+          </div>
+
+
+          <!-- SOURCE -->
+
+          <div class="source-note">
+
+            <strong>Information sources:</strong>
+            U.S. Geological Survey (USGS), Government of Nepal,
+            Health Emergency Operation Centre (HEOC), and
+            established news organizations. Disaster information
+            is evolving as search-and-rescue and recovery
+            operations continue.
+
+          </div>
+
         </div>
 
-        <div class="construction-kicker">
-          Humanity Himalaya
-        </div>
+      </article>
 
-        <h1>
-                  <span>Coming Soon</span>
-        </h1>
+
+      <!-- DONATE -->
+
+      <div class="news-cta">
+
+        <h2>
+          Help Communities Recover
+        </h2>
 
         <p>
-          We are currently building this section of the
-          Humanity Himalaya website.
+          Your support can help provide essential assistance
+          to people and communities affected by this disaster.
         </p>
 
-        <div class="construction-message">
-          <strong>🚧 Website Under Construction</strong><br />
-          We appreciate your patience while we build a
-          meaningful and informative website for Humanity
-          Himalaya.
-        </div>
 
-        <a class="home-button" href="index.html">
-          ← Back to Home
+        <!-- THIS LINKS TO YOUR EXISTING DONATE PAGE -->
+
+        <a
+          class="donate-button"
+          href="donate.html"
+        >
+          Donate Now
         </a>
 
       </div>
@@ -486,14 +754,20 @@
   <!-- MOBILE MENU -->
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
 
     menuToggle.addEventListener("click", function () {
 
       navLinks.classList.toggle("open");
 
-      const isOpen = navLinks.classList.contains("open");
+      const isOpen =
+        navLinks.classList.contains("open");
 
       menuToggle.setAttribute(
         "aria-expanded",
@@ -501,6 +775,7 @@
       );
 
     });
+
   </script>
 
 </body>
