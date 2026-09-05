@@ -7,12 +7,12 @@
 
   <meta
     name="description"
-    content="Humanity Himalaya — Our website is currently under construction."
+    content="Support Humanity Himalaya through secure online donations, GoFundMe, or direct bank transfer."
   />
 
   <meta name="theme-color" content="#102f4f" />
 
-  <title>Our Work | Humanity Himalaya</title>
+  <title>Donate Now | Humanity Himalaya</title>
 
   <style>
     :root {
@@ -144,50 +144,16 @@
       cursor: pointer;
     }
 
-    /* ---------- UNDER CONSTRUCTION ---------- */
+    /* ---------- DONATION PAGE ---------- */
 
-    .construction {
-      min-height: calc(100vh - 124px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+    .donate-hero {
       background:
-        linear-gradient(
-          135deg,
-          #f5f8fb 0%,
-          #ffffff 50%,
-          #f5f8fb 100%
-        );
-      padding: 80px 20px;
+        linear-gradient(135deg, #f5f8fb 0%, #ffffff 55%, #f5f8fb 100%);
+      padding: 70px 20px 75px;
+      text-align: center;
     }
 
-    .construction-card {
-      width: min(760px, 100%);
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 65px 50px;
-      box-shadow: 0 18px 50px rgba(11, 36, 59, 0.10);
-    }
-
-    /* Construction sign */
-
-    .construction-sign {
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 30px;
-      background: var(--orange);
-      color: #ffffff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 52px;
-      box-shadow: 0 12px 30px rgba(239, 91, 35, 0.25);
-    }
-
-    .construction-kicker {
+    .donate-kicker {
       color: var(--orange);
       text-transform: uppercase;
       font-size: 13px;
@@ -196,53 +162,169 @@
       margin-bottom: 12px;
     }
 
-    .construction h1 {
+    .donate-hero h1 {
       color: var(--navy);
       font-size: clamp(38px, 6vw, 58px);
       line-height: 1.1;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .construction h1 span {
+    .donate-hero h1 span {
       color: var(--orange);
     }
 
-    .construction p {
-      max-width: 610px;
-      margin: 0 auto 18px;
+    .donate-hero p {
+      max-width: 720px;
+      margin: 0 auto;
       color: var(--muted);
       font-size: 17px;
     }
 
-    .construction-message {
-      margin-top: 25px;
-      padding: 18px 22px;
-      background: var(--light);
-      border-left: 4px solid var(--orange);
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 15px;
-      text-align: left;
+    .donation-section {
+      padding: 55px 20px 80px;
+      background: #fff;
     }
 
-    .home-button {
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .donation-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px 28px;
+      box-shadow: 0 14px 35px rgba(11, 36, 59, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .donation-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: #fff1eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      margin-bottom: 20px;
+    }
+
+    .donation-card h2 {
+      color: var(--navy);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .donation-card > p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .donate-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-top: 30px;
       min-height: 50px;
-      padding: 0 26px;
-      border-radius: 8px;
+      padding: 0 22px;
+      border-radius: 9px;
       background: var(--orange);
-      color: #ffffff;
+      color: #fff;
       font-weight: 800;
-      font-size: 14px;
+      font-size: 15px;
+      margin-top: auto;
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .home-button:hover {
+    .donate-button:hover {
       background: var(--orange-dark);
       transform: translateY(-2px);
+    }
+
+    .gofund-button {
+      background: var(--navy);
+    }
+
+    .gofund-button:hover {
+      background: var(--navy-dark);
+    }
+
+    .bank-details {
+      background: var(--light);
+      border-radius: 12px;
+      padding: 18px;
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+
+    .bank-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .bank-row:last-child {
+      border-bottom: 0;
+    }
+
+    .bank-label {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .bank-value {
+      color: var(--text);
+      font-weight: 800;
+      text-align: right;
+      word-break: break-word;
+    }
+
+    .bank-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .donation-note {
+      max-width: 900px;
+      margin: 34px auto 0;
+      padding: 18px 22px;
+      background: #fff8f4;
+      border-left: 4px solid var(--orange);
+      border-radius: 9px;
+      color: var(--text);
+      font-size: 14px;
+      text-align: left;
+    }
+
+    @media (max-width: 900px) {
+      .donation-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .donate-hero {
+        padding: 55px 15px 60px;
+      }
+
+      .donation-section {
+        padding: 40px 15px 60px;
+      }
+
+      .donation-card {
+        padding: 27px 22px;
+      }
     }
 
     /* ---------- FOOTER ---------- */
@@ -408,7 +490,7 @@
           </li>
 
           <li>
-            <a class="active" class="nav-donate" href="donate.html">
+            <a class="active nav-donate" href="donate.html">
               Donate Now
             </a>
           </li>
@@ -420,45 +502,105 @@
   </header>
 
 
-  <!-- UNDER CONSTRUCTION -->
+  <!-- DONATE NOW -->
 
   <main>
 
-    <section class="construction">
-
-      <div class="construction-card">
-
-        <!-- Construction Sign -->
-        <div class="construction-sign" aria-hidden="true">
-          🚧
-        </div>
-
-        <div class="construction-kicker">
-          Humanity Himalaya
-        </div>
-
-        <h1>
-                  <span>Coming Soon</span>
-        </h1>
-
+    <section class="donate-hero">
+      <div class="container">
+        <div class="donate-kicker">Support Humanity Himalaya</div>
+        <h1>Donate <span>Now</span></h1>
         <p>
-          We are currently building this section of the
-          Humanity Himalaya website.
+          Your support helps Humanity Himalaya provide meaningful relief,
+          restore communities, and help families rebuild their lives.
+          Choose the donation method that works best for you.
         </p>
+      </div>
+    </section>
 
-        <div class="construction-message">
-          <strong>🚧 Website Under Construction</strong><br />
-          We appreciate your patience while we build a
-          meaningful and informative website for Humanity
-          Himalaya.
+    <section class="donation-section">
+      <div class="container">
+
+        <div class="donation-grid">
+
+          <!-- Zeffy -->
+          <article class="donation-card">
+            <div class="donation-icon" aria-hidden="true">💙</div>
+            <h2>Donate Online </h2>
+            <p>
+              This is a convenient and secure option for donating by card or other payment methods.
+            </p>
+            <a
+              class="donate-button"
+              href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-22918"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate →
+            </a>
+          </article>
+
+          <!-- GoFundMe -->
+          <article class="donation-card">
+            <div class="donation-icon" aria-hidden="true">❤️</div>
+                       <p>
+              You can also support our fundraising campaign.
+              Click below to visit the campaign and make your contribution.
+            </p>
+            <a
+              class="donate-button gofund-button"
+              href="https://gofund.me/7d91948e1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate on Campaign →
+            </a>
+          </article>
+
+          <!-- Bank Transfer -->
+          <article class="donation-card">
+            <div class="donation-icon" aria-hidden="true">🏦</div>
+            <h2>Direct Bank Transfer</h2>
+            <p>
+              If you prefer to donate directly through a bank transfer,
+              you may use the following account information.
+            </p>
+
+            <div class="bank-details">
+              <div class="bank-row">
+                <span class="bank-label">Bank Name</span>
+                <span class="bank-value">PNC Bank</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">Routing Number</span>
+                <span class="bank-value">043000096</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">Account Number</span>
+                <span class="bank-value">1098166627</span>
+              </div>
+              <div class="bank-row">
+                <span class="bank-label">SWIFT</span>
+                <span class="bank-value">PNCCUS33</span>
+              </div>
+            </div>
+
+            <p class="bank-note">
+              SWIFT/BIC may also be written as PNCCUS33XXX for an 11-character
+              format, when required by the sending bank.
+            </p>
+          </article>
+
         </div>
 
-        <a class="home-button" href="index.html">
-          ← Back to Home
-        </a>
+        <div class="donation-note">
+          <strong>Thank you for supporting Humanity Himalaya.</strong>
+          Every contribution helps us continue our mission of relief, restoration,
+          and rebuilding. Please verify the recipient/account details with your
+          bank before sending a direct transfer.
+        </div>
 
       </div>
-
     </section>
 
   </main>
