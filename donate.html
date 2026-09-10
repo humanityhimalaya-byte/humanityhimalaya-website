@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
 
   <meta
     name="description"
-    content="Support Humanity Himalaya through secure online donations, GoFundMe, or direct bank transfer."
+    content="Support Humanity Himalaya through secure online donations, GoFundMe, Zelle, or direct bank transfer."
   />
 
   <meta name="theme-color" content="#102f4f" />
@@ -148,7 +147,12 @@
 
     .donate-hero {
       background:
-        linear-gradient(135deg, #f5f8fb 0%, #ffffff 55%, #f5f8fb 100%);
+        linear-gradient(
+          135deg,
+          #f5f8fb 0%,
+          #ffffff 55%,
+          #f5f8fb 100%
+        );
       padding: 70px 20px 75px;
       text-align: center;
     }
@@ -254,6 +258,8 @@
       background: var(--navy-dark);
     }
 
+    /* ---------- BANK DETAILS ---------- */
+
     .bank-details {
       background: var(--light);
       border-radius: 12px;
@@ -293,6 +299,47 @@
       margin-top: 12px;
     }
 
+    /* ---------- ZELLE ---------- */
+
+    .zelle-section {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .zelle-section h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .zelle-section p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .zelle-image {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(11, 36, 59, 0.08);
+    }
+
+    .funds-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: #f5f8fb;
+      border-radius: 10px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: left;
+    }
+
     .donation-note {
       max-width: 900px;
       margin: 34px auto 0;
@@ -304,6 +351,8 @@
       font-size: 14px;
       text-align: left;
     }
+
+    /* ---------- RESPONSIVE DONATION GRID ---------- */
 
     @media (max-width: 900px) {
       .donation-grid {
@@ -324,6 +373,10 @@
 
       .donation-card {
         padding: 27px 22px;
+      }
+
+      .zelle-image {
+        max-width: 100%;
       }
     }
 
@@ -470,19 +523,19 @@
           </li>
 
           <li>
-            <a  href="about.html">About Us</a>
+            <a href="about.html">About Us</a>
           </li>
 
           <li>
-            <a  href="our-work.html">Our Work</a>
+            <a href="our-work.html">Our Work</a>
           </li>
 
           <li>
-            <a  href="get-involved.html">Get Involved</a>
+            <a href="get-involved.html">Get Involved</a>
           </li>
 
           <li>
-            <a  href="news.html">News &amp; Updates</a>
+            <a href="news.html">News &amp; Updates</a>
           </li>
 
           <li>
@@ -508,31 +561,59 @@
 
     <section class="donate-hero">
       <div class="container">
-        <div class="donate-kicker">Support Humanity Himalaya</div>
-        <h1>Donate <span>Now</span></h1>
+
+        <div class="donate-kicker">
+          Support Humanity Himalaya
+        </div>
+
+        <h1>
+          Donate <span>Now</span>
+        </h1>
+
         <p>
           Your support helps Humanity Himalaya provide meaningful relief,
           restore communities, and help families rebuild their lives.
           Choose the donation method that works best for you.
         </p>
+
       </div>
     </section>
 
+
     <section class="donation-section">
+
       <div class="container">
 
         <div class="donation-grid">
 
-          <!-- Zeffy -->
+          <!-- ZEFFY -->
+
           <article class="donation-card">
-            <div class="donation-icon" aria-hidden="true">💙</div>
-            <h2>Donate Online </h2>
+
+            <div class="donation-icon" aria-hidden="true">
+              💙
+            </div>
+
+            <h2>Donate Online</h2>
+
             <p>
-             This is a convenient and secure option for donating by card or other payment methods.
-Please note: It may ask for an optional contribution to support platform. This is not required and does not go to HumanityHimalaya.
-If you do not wish to contribute to Zeffy, simply select “Other” and enter $0. You can also choose any amount you prefer.
-Thank you for supporting HumanityHimalaya and helping us make a difference. 💜
+              This is a convenient and secure option for donating by card
+              or other payment methods.
+              <br><br>
+
+              Please note: It may ask for an optional contribution to
+              support the platform. This is not required and does not go
+              to HumanityHimalaya.
+              <br><br>
+
+              If you do not wish to contribute to Zeffy, simply select
+              “Other” and enter $0. You can also choose any amount you prefer.
+              <br><br>
+
+              Thank you for supporting HumanityHimalaya and helping us make
+              a difference. 💜
             </p>
+
             <a
               class="donate-button"
               href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-22918"
@@ -541,18 +622,38 @@ Thank you for supporting HumanityHimalaya and helping us make a difference. 💜
             >
               Donate →
             </a>
+
           </article>
 
-          <!-- GoFundMe -->
+
+          <!-- GOFUNDME -->
+
           <article class="donation-card">
-            <div class="donation-icon" aria-hidden="true">❤️</div>
-                       <p>
+
+            <div class="donation-icon" aria-hidden="true">
+              ❤️
+            </div>
+
+            <h2>Fundraising Campaign</h2>
+
+            <p>
               You can also support our fundraising campaign.
               Click below to visit the campaign and make your contribution.
- During payment, you can skip the optional tip or service fee by sliding the bar to $0 or selecting “Custom Tip” and entering $0. This is completely optional and does not go to HumanityHimalaya.
-Thank you for your generous support! 💜
-Your contribution helps HumanityHimalaya make a meaningful difference in the lives of those in need.
+              <br><br>
+
+              During payment, you can skip the optional tip or service fee
+              by sliding the bar to $0 or selecting “Custom Tip” and entering
+              $0. This is completely optional and does not go to
+              HumanityHimalaya.
+              <br><br>
+
+              Thank you for your generous support! 💜
+              <br><br>
+
+              Your contribution helps HumanityHimalaya make a meaningful
+              difference in the lives of those in need.
             </p>
+
             <a
               class="donate-button gofund-button"
               href="https://gofund.me/7d91948e1"
@@ -561,51 +662,119 @@ Your contribution helps HumanityHimalaya make a meaningful difference in the liv
             >
               Donate on Campaign →
             </a>
+
           </article>
 
-          <!-- Bank Transfer -->
+
+          <!-- DIRECT BANK TRANSFER / ZELLE -->
+
           <article class="donation-card">
-            <div class="donation-icon" aria-hidden="true">🏦</div>
+
+            <div class="donation-icon" aria-hidden="true">
+              🏦
+            </div>
+
             <h2>Direct Bank Transfer</h2>
-<p>If you’d like to contribute via check, bank transfer, ACH, Zelle, or wire transfer, please refer to the bank details listed below.
-For checks, please make them payable to <strong>HumanityHimalaya</strong>.
-We sincerely appreciate your generosity. </p>
+
+            <p>
+              If you’d like to contribute via check, bank transfer, ACH,
+              Zelle, or wire transfer, please refer to the bank details
+              listed below.
+              <br><br>
+
+              For checks, please make them payable to
+              <strong>HumanityHimalaya</strong>.
+              <br><br>
+
+              We sincerely appreciate your generosity.
+            </p>
+
+
+            <!-- BANK DETAILS -->
 
             <div class="bank-details">
+
               <div class="bank-row">
                 <span class="bank-label">Bank Name</span>
                 <span class="bank-value">PNC Bank</span>
               </div>
+
               <div class="bank-row">
                 <span class="bank-label">Routing Number</span>
                 <span class="bank-value">043000096</span>
               </div>
+
               <div class="bank-row">
                 <span class="bank-label">Account Number</span>
                 <span class="bank-value">1098166627</span>
               </div>
+
               <div class="bank-row">
                 <span class="bank-label">SWIFT</span>
                 <span class="bank-value">PNCCUS33</span>
               </div>
+
             </div>
 
+
             <p class="bank-note">
-              SWIFT/BIC may also be written as PNCCUS33XXX for an 11-character
-              format, when required by the sending bank.
+              SWIFT/BIC may also be written as PNCCUS33XXX for an
+              11-character format, when required by the sending bank.
             </p>
+
+
+            <!-- ZELLE -->
+
+            <div class="zelle-section">
+
+              <h3>Pay with Zelle®</h3>
+
+              <p>
+                You can also send your donation using Zelle.
+                Scan the QR code below with your banking app to pay.
+              </p>
+
+              <img
+                src="zelle.jpeg"
+                alt="HumanityHimalaya Zelle payment QR code"
+                class="zelle-image"
+              />
+
+              <div class="funds-note">
+                Funds go directly to victims and their services through
+                our nonprofit account.
+              </div>
+
+            </div>
+
           </article>
 
         </div>
 
+
+        <!-- THANK YOU NOTE -->
+
         <div class="donation-note">
+
           <strong>Thank you for supporting Humanity Himalaya.</strong>
-          Every contribution helps us continue our mission of relief, restoration,
-          and rebuilding. Please verify the recipient/account details with your
-          bank before sending a direct transfer.
+
+          Every contribution helps us continue our mission of relief,
+          restoration, and rebuilding.
+
+          <br><br>
+
+          Funds go directly to victims and their services through our
+          nonprofit account.
+
+          <br><br>
+
+          Please verify the recipient/account details with your bank
+          before sending a direct transfer.
+
         </div>
 
       </div>
+
     </section>
 
   </main>
@@ -633,6 +802,7 @@ We sincerely appreciate your generosity. </p>
   <!-- MOBILE MENU -->
 
   <script>
+
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
@@ -648,8 +818,8 @@ We sincerely appreciate your generosity. </p>
       );
 
     });
+
   </script>
 
 </body>
 </html>
-```
